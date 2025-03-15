@@ -8,11 +8,11 @@ RewriteCond %{HTTP:CF-Visitor} !{"scheme":"https"}
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Routing
-RewriteRule ^(impressum|copyright)/?$ /pages/impressum.html [L,NC,END]
-RewriteRule ^404/?$ /pages/404.html [L,END]
+RewriteRule ^(impressum|copyright)/?$ /sites/impressum.html [L,NC,END]
+RewriteRule ^404/?$ /sites/404.html [L,END]
 
 # Block direct access to files in the /pages directory
-RewriteCond %{REQUEST_URI} ^/pages/
+RewriteCond %{REQUEST_URI} ^/sites/
 RewriteRule .* - [F]
 
 # Errors
