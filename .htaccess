@@ -1,0 +1,20 @@
+# URL rewriting
+RewriteEngine On
+
+# HTTPS
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:CF-Visitor} !{"scheme":"https"}
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Routing
+RewriteRule ^(impressum|copyright)/?$ /pages/impressum.html [L,NC,END]
+RewriteRule ^404/?$ /pages/404.html [L,END]
+
+# Block direct access to files in the /pages directory
+RewriteCond %{REQUEST_URI} ^/pages/
+RewriteRule .* - [F]
+
+# Errors
+ErrorDocument 404 /404
+ErrorDocument 403 /404

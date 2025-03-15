@@ -1,0 +1,401 @@
+\documentclass[fontsize=9pt, paper=landscape]{scrartcl}
+
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{lmodern, amsmath, amssymb, graphicx, hyperref, multicol, minted}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+\newcommand{\ttilde}{\raisebox{0.5ex}{\texttildelow}}
+
+\title{CheatSheet Computer Science Math/Phys AS 2023}
+\author{Florian Frauenfelder}
+\date{03.01.2024}
+
+\begin{document}
+
+\begin{center}
+	{\huge CheatSheet} by Florian Frauenfelder, Computer Science Math/Phys AS 2023
+\end{center}
+
+\begin{multicols}{2}
+
+\setcounter{section}{-1}
+\section{Misc}
+
+\subsection{Number conversion}
+
+Numbers of different types in joint expressions are converted to the most general or ``biggest'' one according to the following order:
+
+\mintinline{cpp}|bool / char < int < unsigned int < float < double|
+
+\subsection{Operator precedence}
+
+\begin{tabular}{|l|c|c|}
+	\hline
+	Operator & Prec. & Dir. \\
+	\hline
+	
+	\mintinline{cpp}|::| & 17 & L \\
+	\mintinline{cpp}|a++, f(), [], ., ->| & 16 & L \\
+	\hline
+	\mintinline{cpp}|++a, -a, !, ~, (T), *p, &a, new, delete| & 15 & R \\
+	\hline
+	\mintinline{cpp}|*, /, %| & 13 & L \\
+	\mintinline{cpp}|a+b, a-b| & 12 & L \\
+	\mintinline{cpp}|<, <=, >, >=| & 9 & L \\
+	\mintinline{cpp}|==, !=| & 8 & L \\
+	\hline
+	\mintinline{cpp}*&, ^, |* & 7, 6, 5 & L \\
+	\hline
+	\mintinline{cpp}|&&| & 4 & L \\
+	\mintinline{cpp}*||* & 3 & L \\
+	\hline
+	\mintinline{cpp}@=, +=, -=, *=, /=, %=, &=, ^=, |=@ & 2 & R \\
+	\hline
+\end{tabular}
+
+\subsection{Hex, decimal and binary}
+
+\begin{tabular}{|c|c|c|||c|c|c|}
+	\hline
+	Hex & Bin & Dec & Hex & Bin & Dec \\
+	\hline
+	0 & 0000 & 0 & 8 & 1000 & 8 \\
+	1 & 0001 & 1 & 9 & 1001 & 9 \\
+	2 & 0010 & 2 & a & 1010 & 10 \\
+	3 & 0011 & 3 & b & 1011 & 11 \\
+	\hline
+	4 & 0100 & 4 & c & 1100 & 12 \\
+	5 & 0101 & 5 & d & 1101 & 13 \\
+	6 & 0110 & 6 & e & 1110 & 14 \\
+	7 & 0111 & 7 & f & 1111 & 15 \\
+	\hline
+\end{tabular}
+
+Powers of 2:\\
+\begin{tabular}{r|r|r|r|r|r|r|r|r|r|r}
+	0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+	\hline
+	1 & 2 & 4 & 8 & 16 & 32 & 64 & 128 & 256 & 512 & 1024 \\
+\end{tabular}
+
+Multiples of 16:\\
+\begin{tabular}{r|r|r|r|r|r|r|r|r|r|r|r|r|r}
+	3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 \\
+	\hline
+	48 & 64 & 80 & 96 & 112 & 128 & 144 & 160 & 176 & 192 & 208 & 224 & 240 & 256 \\
+\end{tabular}
+
+\subsection{ASCII}
+
+\resizebox{\columnwidth}{!}{
+	\begin{tabular}{|r|c|l||r|c|l||r|c|l||r|c|l||r|c|l||r|c|l|}
+		\hline
+		Dec & Hex && Dec & Hex && Dec & Hex && Dec & Hex && Dec & Hex && Dec & Hex & \\
+		\hline
+		32 & 20 & & 48 & 30 & 0 & 64 & 40 & @ & 80 & 50 & P & 96 & 60 & ` & 112 & 70 & p \\
+		33 & 21 & ! & 49 & 31 & 1 & 65 & 41 & A & 81 & 51 & Q & 97 & 61 & a & 113 & 71 & q \\
+		34 & 22 & " & 50 & 32 & 2 & 66 & 42 & B & 82 & 52 & R & 98 & 62 & b & 114 & 72 & r \\
+		35 & 23 & \# & 51 & 33 & 3 & 67 & 43 & C & 83 & 53 & S & 99 & 63 & c & 115 & 73 & s \\
+		36 & 24 & \$ & 52 & 34 & 4 & 68 & 44 & D & 84 & 54 & T & 100 & 64 & d & 116 & 74 & t \\
+		37 & 25 & \% & 53 & 35 & 5 & 69 & 45 & E & 85 & 55 & U & 101 & 65 & e & 117 & 75 & u \\
+		38 & 26 & \& & 54 & 36 & 6 & 70 & 46 & F & 86 & 56 & V & 102 & 66 & f & 118 & 76 & v \\
+		39 & 27 & ' & 55 & 37 & 7 & 71 & 47 & G & 87 & 57 & W & 103 & 67 & g & 119 & 77 & w \\
+		40 & 28 & ( & 56 & 38 & 8 & 72 & 48 & H & 88 & 58 & X & 104 & 68 & h & 120 & 78 & x \\
+		41 & 29 & ) & 57 & 39 & 9 & 73 & 49 & I & 89 & 59 & Y & 105 & 69 & i & 121 & 79 & y \\
+		42 & 2A & * & 58 & 3A & : & 74 & 4A & J & 90 & 5A & Z & 106 & 6A & j & 122 & 7A & z \\
+		43 & 2B & + & 59 & 3B & ; & 75 & 4B & K & 91 & 5B & [ & 107 & 6B & k & 123 & 7B & \{ \\
+		44 & 2C & , & 60 & 3C & < & 76 & 4C & L & 92 & 5C & \textbackslash & 108 & 6C & l & 124 & 7C & | \\
+		45 & 2D & - & 61 & 3D & = & 77 & 4D & M & 93 & 5D & ] & 109 & 6D & m & 125 & 7D & \} \\
+		46 & 2E & . & 62 & 3E & > & 78 & 4E & N & 94 & 5E & \textasciicircum & 110 & 6E & n & 126 & 7E & \textasciitilde \\
+		47 & 2F & / & 63 & 3F & ? & 79 & 4F & O & 95 & 5F & \_ & 111 & 6F & o & 127 & 7F & DEL \\
+		\hline
+	\end{tabular}
+}
+
+The first characters (0 -- 31 or 00 -- 1F) are non-printable control characters.
+
+\section{Integers}
+
+\subsection{Signed and negative integers}
+
+Negative integers can be displayed in binary using the following method: Write down all possible binary combinations in order. Half of them start with 1, we use this first bit as the \textbf{sign}. Now interpret all numbers with the first bit set as negative numbers, with the highest one ($11\dots11$) corresponding to $-1$. This way, we get $2^{\text{bits}-1}-1$ positive and $2^{\text{bits}-1}$ negative numbers, with the remaining one being $0 \cong 00\dots00$.
+
+Example with three bits:
+\begin{tabular}{|c|c||c|c|}
+	\hline
+	Dec & Bin & Bin & Dec \\
+	\hline
+	0 & 000 & 000 & 0 \\
+	1 & 001 & 111 & \( -1 \) \\
+	2 & 010 & 110 & \( -2 \) \\
+	3 & 011 & 101 & \( -3 \) \\
+	  &     & 100 & \( -4 \) \\
+	\hline
+\end{tabular}
+
+\section{Logical values}
+
+\subsection{Short-circuit evaluation}
+
+\texttt{C++} uses so-called \textbf{short-circuit evaluation}:
+\begin{itemize}
+	\item \mintinline{cpp}|a && b|: If \texttt{a} evaluates to \mintinline{cpp}|false|, \texttt{b} is not evaluated.
+	\item \mintinline{cpp}*a || b*: If \texttt{a} evaluates to \mintinline{cpp}|true|, \texttt{b} is not evaluated.
+\end{itemize}
+
+\section{Floating point numbers}
+
+\subsection{Floating point system}
+
+We describe a \textbf{floating point system} \[ F(\beta, p, e_{\min}, e_{\max}) \] with four integers, \( \beta \geq 2 \) being the \textbf{base}, \( p \geq 1 \) the \textbf{significand}, \( e_{\min} \) the smallest and \( e_{\max} \geq e_{\min} \) the largest possible \textbf{exponent}. This system contains the numbers \[ \pm d_0.d_1d_2 \dots d_{p-1} \cdot \beta^e \in F(\beta, p, e_{\min}, e_{\max}) \] where \( d_0 \neq 0 \) and \( d_i \in \{ 0, \dots, \beta-1 \} \) and \( e \in \{ e_{\min}, \dots, e_{\max} \} \).
+
+\texttt{C++} uses \( F(2, 24, -126, 127) \) for \mintinline{cpp}|float| and \( F(2, 53, -1022, 1023) \) for \mintinline{cpp}|double|. This means, for \mintinline{cpp}|float|, which is \texttt{32-bit}, we have 1 bit for the sign, 23 bits for the significand (because the first bit is always one, we do not need to specify this) and 8 bit for the exponent, which means 256 different values, of which only 254 (\( 127-(-126)+1 \)) are used, and the two remaining are reserved for special values like \( 0, \infty, \dots \) and the like.
+
+With these systems, we need to be careful, because many numbers do not have exact representations in \texttt{C++}:
+
+\begin{minted}{cpp}
+1.1 - 1.0 != 0.1
+1.1 - 1.0 != 1.1f - 1.0f
+\end{minted}
+
+But, all integers can be converted to floating point numbers without loss of precision.
+
+From this also result the following three important rules:
+\begin{enumerate}
+	\item Don't test rounded floating point numbers for equality.
+	\item Don't add floating point numbers with big differences in the exponent.
+	\item Don't subtract floating point numbers of similar exponents.
+\end{enumerate}
+
+\section{Recursion}
+
+\subsection{Important concepts}
+
+A recursive function \textit{always} needs a \textbf{base case}, and when the function is called, the base case must be reached at some point. Otherwise, we get infinite recursion and stack-overflow (\textrightarrow~exit code \texttt{-11} on \textsf{Code Expert}).
+
+There are two main recursive strategies: `\textbf{Decrease and conquer}' and `\textbf{Divide and conquer}'. We can get to the base case if we always decrease by one and calculate the problem with \( n-1 \), or we can get to the base case if we divide and calculate two remaining, smaller problems with similar sizes, that do not depend on each other. Dividing often is more memory- and time-efficient, but more complicated to write and understand. (With dividing also comes the possibility of parallelizing.)
+
+Recursive solutions often lead to more elegant, simpler and shorter solutions, while iterative solutions are more efficient.
+
+\subsection{Examples from lecture slides}
+
+\subsubsection{Factorial}
+
+Decrease and conquer:
+
+\begin{minted}{cpp}
+unsigned int fac(unsigned int n) {
+  if (n <= 1)
+    return 1;
+  else
+    return n * fac(n-1);
+}
+\end{minted}
+
+\subsubsection{Euclidean Algorithm}
+
+Decrease and conquer?
+
+\begin{minted}{cpp}
+unsigned int gcd(unsigned int a, unsigned int b) {
+  if (b == 0)
+    return a;  
+  else
+    return gcd(b, a % b);
+}
+\end{minted}
+
+\subsubsection{Bitstrings}
+
+Decrease and conquer:
+
+\begin{minted}{cpp}
+void bs(std::string& bs, unsigned int i) {
+  if (i == bs.size()) {
+    std::cout << bs << "\n";
+  } else {
+    bs[i] = '0';
+    all_bs(bs, i+1);
+    bs[i] = '1';
+    all_bs(bs, i+1);
+  }
+}
+\end{minted}
+
+\subsubsection{Vector-sum}
+
+Decrease and conquer:
+
+\begin{minted}{cpp}
+int sum(const std::vector<int>& v, unsigned int from) {
+  if (from >= v.size())
+    return 0;
+  else
+    return v.at(from) + sum(v, from + 1);
+}
+\end{minted}
+
+Or Divide and conquer:
+
+\begin{minted}{cpp}
+using uint = unsigned int;
+int sum(const std::vector<int>& v, uint from, uint to) {
+  if (from > to)
+    return 0;
+  else if (from == to)
+    return v.at(from);
+  else {
+    uint middle = (from + to) / 2;
+    return sum(v, from, middle) + sum(v, middle + 1, to);
+  }
+}
+\end{minted}
+
+\section{Function overloading}
+
+Functions in \texttt{C++} can be \textbf{overloaded} by defining a new function with the \textit{same name}, but a \textit{different \textbf{signature}}, meaning a different number and/or order of arguments and/or arguments with different types (the names of the arguments do not influence the signature). The correct implementation of the function when called is chosen using the provided values for the arguments.
+
+\textit{Important}: Defining two functions with the same signature results in a \textbf{compiler error}.
+
+\section{Custom data types}
+
+\subsection{Operator overloading}
+
+With most operators, everything is straightforward. But:
+
+\begin{minted}{cpp}
+T& operator+=(T& a, T b) {
+  // calculations
+  return a;
+}
+\end{minted}
+and similarly for \mintinline{cpp}|-=|, \mintinline{cpp}|*=|, \mintinline{cpp}|/=|, \mintinline{cpp}|%=|.
+
+And:
+
+\begin{minted}{cpp}
+// POST: r has been written to out
+std::ostream& operator<<(std::ostream& out, T t) {
+  return out << /* something with t */;
+}
+\end{minted}
+and:
+
+\begin{minted}{cpp}
+// PRE:  in starts with something for t
+// POST: t has been read from in
+std::istream& operator>>(std::istream& in, T& t) {
+  return in >> /* something with t */;
+}
+\end{minted}
+
+With out- and input, best practice is to use similar to- and from-string-conversion formats for consistency.
+
+\subsection{Structs and Classes}
+
+The only difference between a \mintinline{cpp}|struct| and a \mintinline{cpp}|class| is that in a \mintinline{cpp}|struct|, everything is \mintinline{cpp}|public| by default, and in a \mintinline{cpp}|class|, everything is \mintinline{cpp}|private| by default.
+
+\subsection{Containers}
+
+The standard library of \texttt{C++} contains many useful \textbf{container} implementations. Some examples are:
+\begin{itemize}
+	\item \mintinline{cpp}|array<T, size>|, an ordered unsorted collection implemented as a static array ($\rightarrow$ contiguous memory locations)
+	\item \mintinline{cpp}|vector<T>|, an ordered unsorted collection implemented as a dynamic array ($\rightarrow$ contiguous memory locations)
+	\item \mintinline{cpp}|list<T>|, an ordered unsorted collection implemented as a doubly linked list
+	\item \mintinline{cpp}|unordered_set<T>|, an unordered duplicate-free collection implemented as a hash table
+	\item \mintinline{cpp}|set<T>|, an ordered unsorted duplicate-free collection implemented as a red-black tree
+\end{itemize}
+
+\subsection{Iterators}
+
+Every container in \texttt{C++} has its \textbf{iterator} with the following properties:
+
+\begin{itemize}
+	\item \mintinline{cpp}|it = c.begin()| is an iterator pointing to the first element.
+	\item \mintinline{cpp}|it = c.end()| is an iterator pointing \textit{behind} the last element.
+	\item \mintinline{cpp}|++it| moves the iterator to the next element.
+	\item \mintinline{cpp}|*it| de-references the iterator, returning the value of the element (see \hyperref[sec:ptrs-op]{pointers}).
+\end{itemize}
+
+Therefore, we can implement many helpful functions and methods with containers, without knowing their exact implementation, just with iterators.
+
+\section{Dynamic Memory and pointers}
+
+``\textbf{Pointers} are like \textbf{references} that may point to nothing''.
+
+\subsection{Operators and types}
+\label{sec:ptrs-op}
+
+\begin{itemize}
+	\item \mintinline{cpp}|T* p| means a pointer to data of type \texttt{T}.
+	\item \mintinline{cpp}|&a| returns a pointer to \texttt{a}.
+	\item \mintinline{cpp}|*p| de-references the pointer \texttt{p} and returns the value of the data behind the pointer.
+\end{itemize}
+
+\subsection{\mintinline{cpp}|const|-(mad)ness}
+
+Rule: Read from right to left.
+
+\begin{tabular}{|l|l|}
+	\hline
+	\mintinline{cpp}|int const p1| & \texttt{p1} is a constant integer \\
+	\mintinline{cpp}|int const* p2| & \texttt{p2} is a pointer to a constant integer \\
+	\mintinline{cpp}|int* const p3| & \texttt{p3} is a constant pointer to an integer \\
+	\mintinline{cpp}|int const* const p4| & \texttt{p4} is a constant pointer to a constant integer \\
+	\hline
+\end{tabular}
+
+We see that the ``only'' important thing is the placement of the \mintinline{cpp}|*|, everything else can actually be swapped around.
+
+\textit{Remark}: \mintinline{cpp}|const| with methods in classes is different: \mintinline{cpp}|T C::f() const = {}| means that the method \texttt{f} does not change any of the values of the instance of \texttt{C}.
+
+\subsection{\mintinline{cpp}|new| and \mintinline{cpp}|delete|}
+
+Rule: For every \mintinline{cpp}|new|, there must be a corresponding \mintinline{cpp}|delete|.
+
+\mintinline{cpp}|T* p = new T()| returns a \textit{pointer} to the created instance of \texttt{T}. The object lives until explicitly deleted with \mintinline{cpp}|delete p|.
+
+\textit{But}: \mintinline{cpp}|delete p| does not set \mintinline{cpp}|p = nullptr|!
+
+Always be careful with \mintinline{cpp}|new| and \mintinline{cpp}|delete|: dangling pointers, zombie-memory, memory leaks, etc \dots
+
+To simplify these problems, we can use \mintinline{cpp}|std::shared_ptr<T>| or \mintinline{cpp}|std::unique_ptr<T>|.
+
+\subsection{Rule of three}
+
+Rule: If a class implements one of
+\begin{itemize}
+	\item \hyperref[sec:destr]{destructor}
+	\item \hyperref[sec:copy-constr]{copy constructor}
+	\item \hyperref[sec:assign-op]{assignment operator},
+\end{itemize}
+it also needs the other two!
+
+\subsubsection{Destructor}
+\label{sec:destr}
+
+The \textbf{destructor} \mintinline{cpp}|C::~C()| contains the necessary corresponding \texttt{delete} statements for the \texttt{new} statements in the constructors.
+
+\subsubsection{Copy constructor}
+\label{sec:copy-constr}
+
+The \textbf{copy constructor} \mintinline{cpp}|C::C(const C& x)| constructs a ``real'' or \textbf{deep copy} of all member variables.
+
+\subsubsection{Assignment operator}
+\label{sec:assign-op}
+
+The \textbf{assignment operator} \mintinline{cpp}|C& C::operator=(const C& c)| is very similar to the copy constructor, but first needs to deconstruct \texttt{this} and then copy from the other object.
+
+\textit{Important}: Make sure to not do anything in case of self-assignment.
+
+The assignment operator can be implemented for example in the following two ways:
+
+\begin{itemize}
+	\item Call destructor, (adapted) code from copy constructor, \mintinline{cpp}|return *this|
+	\item Use temporary object with copy constructor from the other object, use \mintinline{cpp}|std::swap()| with all values on \mintinline{cpp}|this| and the temporary object, \mintinline{cpp}|return *this|
+\end{itemize}
+
+\end{multicols}
+
+\end{document}

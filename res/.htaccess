@@ -1,0 +1,11 @@
+# Allow access only if the request comes from your website or is not blocked directly
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Allow access if the referer is your website or if the request is not for .css/.js
+  RewriteCond %{HTTP_REFERER} ^https?://(www\.)?florian-frauenfelder\.ch/ [NC]
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule .* - [L]
+
+  # Deny everything else
+  RewriteRule .* - [F]
+</IfModule>
