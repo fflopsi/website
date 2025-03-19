@@ -1,26 +1,96 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Large scale tags */
+html {
+  scroll-padding-top: 3rem;
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+  font-family: 'Source Code Pro', monospace;
+  color: var(--text);
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding-left: var(--border-lr);
+  padding-right: var(--border-lr);
+  padding-top: 4vh;
+  padding-bottom: 8vh;
+}
+#content {
+  padding-left: 1vw;
+  margin-top: 2vh;
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--title);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--heading);
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+}
+h3, h4, h5, h6 {
+  color: var(--heading);
+  padding-top: 1rem;
+}
+
+/* Lists */
+ul {
+  padding-left: 1rem;
+  list-style-type: none;
+}
+li {
+  margin: 0.5rem;
+  list-style-type: none;
+}
+
+/* Texts */
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.normal {
+  color: var(--title);
+  text-decoration: none;
+}
+em {
+  color: var(--title);
+  font-style: normal;
+}
+.cpp-code {
+  color: var(--hover);
+  border-radius: 4px;
+  padding: 2px 4px;
+  background-color: #333333;
+  font-family: 'Roboto Mono', 'Menlo', monospace;
+}
+a,
+.link-like {
+  color: var(--link);
+  text-decoration: underline;
+  transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+}
+a:hover,
+.link-like:hover {
+  color: var(--hover);
+  text-decoration: none;
+  transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+}
+
+/* Other */
+hr {
+  height: 1px;
+  border: none;
+  color: gray;
+  background-color: gray;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
 }
