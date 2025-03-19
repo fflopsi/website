@@ -1,4 +1,5 @@
 import Script from "next/script";
+import DateFooter from "@/public/js/dateFooter";
 
 export default function Custom404() {
   return (
@@ -15,7 +16,7 @@ export default function Custom404() {
 
       </div>
 
-      {/* <date-footer date="2024-12-19"></date-footer>   */}
+      {DateFooter("2024-12-19")}
     </div>
   )
 }
