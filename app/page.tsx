@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <h1 id="title">Florian</h1>
 
-      <nav active="/"><a>Home</a></nav>
+      <nav data-active="/"><a>Home</a></nav>
 
       <div id="content">
 
