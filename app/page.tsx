@@ -1,16 +1,17 @@
 import Image from "next/image";
 import Script from "next/script";
+import NavBar from "@/public/js/navBar";
 import DateFooter from "@/public/js/dateFooter";
 
 export default function Home() {
   return (
     <div>
       <Script src="/js/navBar.js"/>
-      <Script src="/js/getTitle.js"/>
+      {/* <Script src="/js/getTitle.js"/> */}
 
-      <h1 id="title">Florian</h1>
+      <h1 id="title">Florian Frauenfelder</h1>
 
-      <nav data-active="/"><a>Home</a></nav>
+      {NavBar("/")}
 
       <div id="content">
 
