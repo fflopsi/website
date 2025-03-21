@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { parse } from "node-html-parser";
+import { useRef, useState } from "react";
 
 export default function NavBar(active: String) {
   const match = (href: string): "active" | "" =>
@@ -14,8 +14,11 @@ export default function NavBar(active: String) {
     "/astro/": "Hobby Astronomer",
   }
 
+  const navRef = useRef<HTMLElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav>
+    <nav ref={navRef}>
       <Link href="/" className={match("/")}>Home</Link>
       {/* <div class="dropdown">
         <button class="dropbtn">Teaching Assistant
@@ -30,15 +33,14 @@ export default function NavBar(active: String) {
       <Link href="/ta/" className={match("/ta/")}>Teaching Assistant</Link>
       <Link href="/coding/" className={match("/coding/")}>Hobby Coder</Link>
       <Link href="/astro/" className={match("/astro/")}>Hobby Astronomer</Link>
-      <Link href="javascript:void(0);" className="icon" onClick={() => toggleNavBar()}>
-        <i className="fa fa-bars"/>
-      </Link>
+      <button className="icon" onClick={() => {
+        if (navRef.current) {
+          navRef.current.classList.toggle("responsive");
+          setIsOpen(!isOpen);
+        }
+      }}>
+        { isOpen ? '\u25b2' : '\u25bc' }
+      </button>
     </nav>
   );
-}
-
-// Toggle responsive class for top navigation on click of hamburger menu
-function toggleNavBar() {
-  var nav = document.querySelector("nav");
-  if (nav) nav.classList.toggle("responsive");
 }

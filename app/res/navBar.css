@@ -28,7 +28,8 @@ nav.sticky {
 }
 
 /* Single nav tags */
-nav a
+nav a,
+nav button.icon
 /*, nav .dropdown*/ {
   margin: 0;
   padding: 0.5rem 1rem;
@@ -47,10 +48,11 @@ nav a.active {
   color: white;
 }
 nav a:hover,
+nav button.icon:hover,
 nav .dropdown:hover .dropbtn {
   background-color: #444444;
 }
-nav a.icon {
+nav button.icon {
   display: none;
 }
 
@@ -87,25 +89,22 @@ nav .dropdown:hover .dropdown-content {
     float: left;
     display: block;
   }
-  nav a.icon {
+  nav button.icon {
     float: right;
     display: block;
     border-left: 1px solid #666666;
+    background-color: #333333;
   }
 
   /* Extended navigation menu */
-  nav.responsive a.active {
+  nav.responsive a {
     float: none;
     display: block;
   }
-  nav.responsive a.icon {
+  nav.responsive button.icon {
     position: absolute;
     right: 0;
     top: 0;
     border-bottom: 1px solid #666666;
-  }
-  nav.responsive a {
-    float: none;
-    display: block;
   }
 }
