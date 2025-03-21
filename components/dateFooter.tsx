@@ -1,10 +1,6 @@
 import Link from "next/link";
 
-interface DateFooterProps {
-  date: string;
-}
-
-export default function DateFooter({ date }: DateFooterProps) {
+export default function DateFooter({ date }: { date: string }) {
   return (
     <div>
       <hr />

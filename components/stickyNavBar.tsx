@@ -3,11 +3,7 @@
 import { useEffect } from "react";
 import NavBar from "./navBar";
 
-interface NavBarProps {
-  active: string;
-}
-
-export default function StickyNavBar({ active }: NavBarProps) {
+export default function StickyNavBar({ active }: { active: string }) {
   useEffect(() => {
     const handleScroll = () => {
       const nav = document.querySelector("nav");
