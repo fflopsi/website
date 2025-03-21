@@ -14,6 +14,7 @@ export default function StickyNavBar({ active }: { active: string }) {
       }
     };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     return () => {
