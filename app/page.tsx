@@ -1,15 +1,8 @@
-import StickyNavBar from "@/components/stickyNavBar";
-import DateFooter from "@/components/dateFooter";
+import Wrapper from "@/components/wrapper";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Florian Frauenfelder</h1>
-
-      <StickyNavBar active="/" />
-
-      <div id="content">
-
+    <Wrapper title="Florian Frauenfelder" route="/" updated="2025-03-11">
       <h2>About me</h2>
       <p>Hey there, lone traveler! How did you get here?</p>
       <p>Some things about me I think may be worth knowing (not in any particular order):</p>
@@ -25,10 +18,6 @@ export default function Home() {
         <ul>
           <li><a href="mailto:ffrauenfelde@student.ethz.ch">ffrauenfelde@student.ethz.ch</a></li>
         </ul>
-
-      </div>
-
-      <DateFooter date="2025-03-11" />
-    </div>
+    </Wrapper>
   );
 }
