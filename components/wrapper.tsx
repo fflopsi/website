@@ -14,13 +14,13 @@ export default function Wrapper({
   updated: string;
 }) {
   return (
-    <div>
+    <>
       <header>
         <h1>{title}</h1>
       </header>
       <StickyNavBar active={route} />
       <div id="content">{children}</div>
       <DateFooter date={updated} />
-    </div>
+    </>
   );
 }
