@@ -1,14 +1,12 @@
-import Script from "next/script";
-import DateFooter from "@/public/js/dateFooter";
+import StickyNavBar from "@/components/stickyNavBar";
+import DateFooter from "@/components/dateFooter";
 
 export default function Custom404() {
   return (
     <div>
-      <Script src="/js/navBar.js"/>
-
       <h1>This didn't work.</h1>
 
-      <nav><a>Home</a></nav>
+      <StickyNavBar active="/404/" />
 
       <div id="content">
 
@@ -16,7 +14,7 @@ export default function Custom404() {
 
       </div>
 
-      {DateFooter("2024-12-19")}
+      <DateFooter date="2024-12-19" />
     </div>
   )
 }

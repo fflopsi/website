@@ -1,11 +1,12 @@
-import DateFooter from "@/public/js/dateFooter";
+import StickyNavBar from "@/components/stickyNavBar";
+import DateFooter from "@/components/dateFooter";
 
-export default function Home() {
+export default function Impressum() {
   return (
     <div>
-      <h1 id="title">Florian</h1>
+      <h1>Florian: Copyright</h1>
 
-      <nav data-active="/impressum/"><a>Home</a></nav>
+      <StickyNavBar active="/impressum/" />
 
       <div id="content">
 
@@ -17,7 +18,7 @@ export default function Home() {
 
       </div>
 
-      {DateFooter("2024-12-18")}
+      <DateFooter date="2024-12-18" />
     </div>
   )
 }

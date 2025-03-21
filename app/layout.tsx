@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Source_Code_Pro } from "next/font/google";
-import "./var.css";
-import "./globals.css";
-import "./navBar.css";
+import "./res/var.css";
+import "./res/globals.css";
+import "./res/navBar.css";
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],

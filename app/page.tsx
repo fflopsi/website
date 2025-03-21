@@ -1,17 +1,12 @@
-import Image from "next/image";
-import Script from "next/script";
-import NavBar from "@/public/js/navBar";
-import DateFooter from "@/public/js/dateFooter";
+import StickyNavBar from "@/components/stickyNavBar";
+import DateFooter from "@/components/dateFooter";
 
 export default function Home() {
   return (
     <div>
-      <Script src="/js/navBar.js"/>
-      {/* <Script src="/js/getTitle.js"/> */}
+      <h1>Florian Frauenfelder</h1>
 
-      <h1 id="title">Florian Frauenfelder</h1>
-
-      {NavBar("/")}
+      <StickyNavBar active="/" />
 
       <div id="content">
 
@@ -33,7 +28,7 @@ export default function Home() {
 
       </div>
 
-      {DateFooter("2025-03-11")}
+      <DateFooter date="2025-03-11" />
     </div>
   );
 }
