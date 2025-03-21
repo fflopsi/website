@@ -38,7 +38,7 @@ export default function LinAlg() {
           [ES03] <Link href="files/handout-03.pdf">Handout</Link>
         </li>
         <li>
-          [ES04] <Link href="files/handout-03.pdf">Handout</Link>
+          [ES04] <Link href="files/handout-04.pdf">Handout</Link>
         </li>
       </ul>
 
