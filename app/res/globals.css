@@ -35,7 +35,13 @@ h2 {
   padding-top: 2rem;
   margin-bottom: 1rem;
 }
-h3, h4, h5, h6 {
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--heading);
+  padding-top: 1rem;
+}
+h4, h5, h6 {
   color: var(--heading);
   padding-top: 1rem;
 }
