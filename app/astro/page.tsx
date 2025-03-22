@@ -19,7 +19,7 @@ export default function Astro() {
 
       <h2>Some material</h2>
 
-      <p>This is a really incomplete list of some material I've created, mostly for Saturday evenings with the junior members (in German). Be inspired if you feel like it, but don't assume that everything is correct :)</p>
+      <p>This is a really incomplete list of some material I've created, mostly (even exclusively until now) for Saturday evenings with the junior members (in German). Be inspired if you feel like it, but don't assume that everything is correct :)</p>
 
       <ul>
         <li>An introductory presentation on cosmology: the history of the universe, dark matter and dark energy (<Link href="1-cosmology-pres.pdf">slides</Link>)</li>
