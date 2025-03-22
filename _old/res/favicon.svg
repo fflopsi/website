@@ -1,8 +1,0 @@
-<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
- <g>
-  <title>Layer 1</title>
-  <circle id="svg_1" fill="white" r="120" cy="125" cx="125"/>
-  <path id="svg_2" d="m131.88245,60l80,0l0,20l-60,0l0,40l50,0l0,20l-50,0l0,50l-20,0l0,-130z" stroke="#000" stroke-width="2"/>
-  <path id="svg_3" d="m118.88245,60l-80,0l0,20l60,0l0,40l-50,0l0,20l50,0l0,50l20,0l0,-130z" stroke="#000" stroke-width="2"/>
- </g>
-</svg>
