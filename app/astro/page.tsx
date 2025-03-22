@@ -25,6 +25,7 @@ export default function Astro() {
         <li>An introductory presentation on cosmology: the history of the universe, dark matter and dark energy (<Link href="1-cosmology-pres.pdf">slides</Link>)</li>
         <li>A presentation on dark matter and dark energy: discovery, reasoning and alternative theories (<Link href="2-dark-matter-energy-pres.pdf">slides</Link> and <Link href="2-dark-matter-energy-handout.pdf">handout</Link>)</li>
         <li>A short presentation on dark energy, the geometry of the universe and the Hubble tension (<Link href="3-dark-energy-geometry-hubble-pres.pdf">slides</Link> and <Link href="3-dark-energy-geometry-hubble-handout.pdf">handout</Link>)</li>
+        <li>A short presentation on gravitational waves: theory, origin and observation (<Link href="4-gravitational-waves-pres.pdf">slides</Link> and <Link href="4-gravitational-waves-handout.pdf">handout</Link>)</li>
       </ul>
     </Wrapper>
   );
