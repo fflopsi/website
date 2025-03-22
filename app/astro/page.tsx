@@ -22,9 +22,9 @@ export default function Astro() {
       <p>This is a really incomplete list of some material I've created, mostly for Saturday evenings with the junior members (in German). Be inspired if you feel like it, but don't assume that everything is correct :)</p>
 
       <ul>
-        <li>An introductory presentation on cosmology: the history of the universe, dark matter and dark energy (<Link href="files/1-cosmology-pres.pdf">slides</Link>)</li>
-        <li>A presentation on dark matter and dark energy: discovery, reasoning and alternative theories (<Link href="files/2-dark-matter-energy-pres.pdf">slides</Link> and <Link href="files/2-dark-matter-energy-handout.pdf">handout</Link>)</li>
-        <li>A short presentation on dark energy, the geometry of the universe and the Hubble tension (<Link href="files/3-dark-energy-geometry-hubble-pres.pdf">slides</Link> and <Link href="files/3-dark-energy-geometry-hubble-handout.pdf">handout</Link>)</li>
+        <li>An introductory presentation on cosmology: the history of the universe, dark matter and dark energy (<Link href="1-cosmology-pres.pdf">slides</Link>)</li>
+        <li>A presentation on dark matter and dark energy: discovery, reasoning and alternative theories (<Link href="2-dark-matter-energy-pres.pdf">slides</Link> and <Link href="2-dark-matter-energy-handout.pdf">handout</Link>)</li>
+        <li>A short presentation on dark energy, the geometry of the universe and the Hubble tension (<Link href="3-dark-energy-geometry-hubble-pres.pdf">slides</Link> and <Link href="3-dark-energy-geometry-hubble-handout.pdf">handout</Link>)</li>
       </ul>
     </Wrapper>
   );

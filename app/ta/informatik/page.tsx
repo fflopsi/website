@@ -47,40 +47,40 @@ export default function Informatik() {
       <h2 id="material">Exercise material</h2>
       <ul>
         <li>
-          [ES01] <Link href="files/slides-01.pdf">Organizational slides</Link> | <Link href="files/slides-01-modulo.pdf">Modulo introduction</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/Tables.pdf">Binary representation</Link>
+          [ES01] <Link href="slides-01.pdf">Organizational slides</Link> | <Link href="slides-01-modulo.pdf">Modulo introduction</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/Tables.pdf">Binary representation</Link>
         </li>
         <li>
           [ES02] <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/for_loop.pdf"><span className="cpp-code">for</span> loop</Link>
         </li>
         <li>
-          [ES03] <Link href="files/slides-03.pdf">Slides</Link> | <Link href="files/handout-03.pdf">Handout</Link> (slide summary)
+          [ES03] <Link href="slides-03.pdf">Slides</Link> | <Link href="handout-03.pdf">Handout</Link> (slide summary)
         </li>
         <li>
-          [ES04] <Link href="files/slides-04.pdf">Slides</Link> | <Link href="files/handout-04.pdf">Handout</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/Floating_Point_Guidelines.pdf">Floating point guidelines</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/Comparing_FP.pdf">Comparing floating point numbers</Link>
+          [ES04] <Link href="slides-04.pdf">Slides</Link> | <Link href="handout-04.pdf">Handout</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/Floating_Point_Guidelines.pdf">Floating point guidelines</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/Comparing_FP.pdf">Comparing floating point numbers</Link>
         </li>
         <li>
-          [ES05] <Link href="files/slides-05.pdf">Slides</Link> | <Link href="files/handout-05.pdf">Handout</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/function_exercises1.pdf">Function Exercises I</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/function_exercises2.pdf">Function Exercises II</Link>
+          [ES05] <Link href="slides-05.pdf">Slides</Link> | <Link href="handout-05.pdf">Handout</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/function_exercises1.pdf">Function Exercises I</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/function_exercises2.pdf">Function Exercises II</Link>
         </li>
         <li>
-          [ES06] <Link href="files/slides-06.pdf">Slides</Link> | <Link href="files/handout-06.pdf">Handout</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/references_exercise.pdf">References Exercise</Link>
+          [ES06] <Link href="slides-06.pdf">Slides</Link> | <Link href="handout-06.pdf">Handout</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/references_exercise.pdf">References Exercise</Link>
         </li>
         <li>
-          [ES07] <Link href="files/slides-07.pdf">Slides</Link> | <Link href="files/handout-07.pdf">Handout</Link>
+          [ES07] <Link href="slides-07.pdf">Slides</Link> | <Link href="handout-07.pdf">Handout</Link>
         </li>
         <li>
-          [ES08] <Link href="files/slides-08.pdf">Slides</Link> | <Link href="files/handout-08.pdf">Handout</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/TowersOfHanoi.eng.pdf">Towers of Hanoi</Link> (difficult)
+          [ES08] <Link href="slides-08.pdf">Slides</Link> | <Link href="handout-08.pdf">Handout</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/TowersOfHanoi.eng.pdf">Towers of Hanoi</Link> (difficult)
         </li>
         <li>
-          [ES09] <Link href="files/slides-09.pdf">Slides</Link> | <Link href="files/handout-09.pdf">Handout</Link>
+          [ES09] <Link href="slides-09.pdf">Slides</Link> | <Link href="handout-09.pdf">Handout</Link>
         </li>
         <li>
-          [ES10] <Link href="files/slides-10.pdf">Slides</Link> | <Link href="files/handout-10.pdf">Handout</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/MergeSort.pdf">Merge-Sort</Link>
+          [ES10] <Link href="slides-10.pdf">Slides</Link> | <Link href="handout-10.pdf">Handout</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/MergeSort.pdf">Merge-Sort</Link>
         </li>
         <li>
-          [ES11] <Link href="files/slides-11.pdf">Slides</Link> | <Link href="files/handout-11.pdf">Handout</Link>
+          [ES11] <Link href="slides-11.pdf">Slides</Link> | <Link href="handout-11.pdf">Handout</Link>
         </li>
         <li>
-          [ES12] <Link href="files/slides-12.pdf">Slides</Link> | <Link href="files/handout-12.pdf">Handout</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/Pointers_On_Arrays.pdf">Pointers on arrays</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/Reverse_Copy.pdf">Reverse copy</Link>
+          [ES12] <Link href="slides-12.pdf">Slides</Link> | <Link href="handout-12.pdf">Handout</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/Pointers_On_Arrays.pdf">Pointers on arrays</Link> | <Link target="_blank" href="https://lec.inf.ethz.ch/ifmp/2024/downloads/additional/Reverse_Copy.pdf">Reverse copy</Link>
         </li>
       </ul>
 
@@ -98,7 +98,7 @@ export default function Informatik() {
       <h2>Other stuff</h2>
       <ul>
         <li>
-          [My cheatsheet] <Link href="files/CheatSheet.pdf">PDF</Link> | <Link href="files/CheatSheet.tex">LaTeX source</Link>
+          [My cheatsheet] <Link href="CheatSheet.pdf">PDF</Link> | <Link href="CheatSheet.tex">LaTeX source</Link>
         </li>
       </ul>
 

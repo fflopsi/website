@@ -29,23 +29,23 @@ export default function LinAlg() {
       <h2 id="material">Exercise material</h2>
       <ul>
         <li>
-          [ES01] <Link href="files/handout-01.pdf">Handout</Link>
+          [ES01] <Link href="handout-01.pdf">Handout</Link>
         </li>
         <li>
-          [ES02] <Link href="files/handout-02.pdf">Handout</Link>
+          [ES02] <Link href="handout-02.pdf">Handout</Link>
         </li>
         <li>
-          [ES03] <Link href="files/handout-03.pdf">Handout</Link>
+          [ES03] <Link href="handout-03.pdf">Handout</Link>
         </li>
         <li>
-          [ES04] <Link href="files/handout-04.pdf">Handout</Link>
+          [ES04] <Link href="handout-04.pdf">Handout</Link>
         </li>
       </ul>
 
       {/* <h2>Other stuff</h2>
         <ul>
           <li>
-            [My cheatsheet] <Link href="files/CheatSheet.pdf">PDF</Link> | <Link href="files/CheatSheet.tex">LaTeX source</Link>
+            [My cheatsheet] <Link href="CheatSheet.pdf">PDF</Link> | <Link href="CheatSheet.tex">LaTeX source</Link>
           </li>
         </ul> */}
 
