@@ -1,6 +1,6 @@
 # My personal website in Next.js
 
-[Click here](florian-frauenfelder.ch) to see the website.
+[Click here](https://florian-frauenfelder.ch) to see the website.
 
 ## Edit it yourself
 
