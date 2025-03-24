@@ -40,6 +40,9 @@ export default function LinAlg() {
         <li>
           [ES04] <Link href="handout-04.pdf">Handout</Link>
         </li>
+        <li>
+          [ES05] <Link href="handout-05.pdf">Handout</Link>
+        </li>
       </ul>
 
       {/* <h2>Other stuff</h2>
