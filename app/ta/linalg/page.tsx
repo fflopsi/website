@@ -8,7 +8,7 @@ export const metadata = getMetadata(title, "Florian's TA material for Lineare Al
 
 export default function LinAlg() {
   return (
-    <Wrapper title={title} route="/ta/linalg/" updated="2025-03-18">
+    <Wrapper title={title} route="/ta/linalg/" updated="2025-03-24">
       <h2>Updates</h2>
       <ul>
         <li>
