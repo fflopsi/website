@@ -1,10 +1,29 @@
 import getMetadata from "@/app/res/metadata";
 import Wrapper from "@/components/wrapper";
 import Link from "next/link";
+import { JSX } from "react/jsx-dev-runtime";
 
 const title = "Florian: Lineare Algebra II TA";
 
 export const metadata = getMetadata(title, "Florian's TA material for Lineare Algebra II");
+
+function* range(start: number, end: number, end_included: boolean = true) {
+  for (let i = start; end_included ? i <= end : i < end; i++) yield i;
+}
+
+const pad = (n: number) => n.toLocaleString('en-GB', { minimumIntegerDigits: 2, useGrouping: false });
+
+function Handouts({ max }: { max: number }) {
+  let e: JSX.Element[] = [];
+  for (const n of range(1, max, true)) {
+    e.push(
+      <li key={n}>
+        [ES{pad(n)}] <Link href={"handout-" + pad(n) + ".pdf"}>Handout</Link>
+      </li>
+    );
+  }
+  return e;
+}
 
 export default function LinAlg() {
   return (
@@ -28,21 +47,7 @@ export default function LinAlg() {
 
       <h2 id="material">Exercise material</h2>
       <ul>
-        <li>
-          [ES01] <Link href="handout-01.pdf">Handout</Link>
-        </li>
-        <li>
-          [ES02] <Link href="handout-02.pdf">Handout</Link>
-        </li>
-        <li>
-          [ES03] <Link href="handout-03.pdf">Handout</Link>
-        </li>
-        <li>
-          [ES04] <Link href="handout-04.pdf">Handout</Link>
-        </li>
-        <li>
-          [ES05] <Link href="handout-05.pdf">Handout</Link>
-        </li>
+        <Handouts max={5} />
       </ul>
 
       {/* <h2>Other stuff</h2>
