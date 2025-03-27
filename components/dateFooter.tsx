@@ -6,7 +6,7 @@ export default function DateFooter({ date }: { date: string }) {
       <hr />
       <footer>
         Last updated: {date} // <Link href='/'>Home</Link> //{' '}
-        <Link href='/impressum'>Copyright</Link>
+        <Link href='/legal/'>Legal: Contact, Copyright, Disclaimer, Privacy policy</Link>
       </footer>
     </>
   );
