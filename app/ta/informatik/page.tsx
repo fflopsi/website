@@ -86,13 +86,13 @@ export default function Informatik() {
 
       <h2 id='quiz'>Quiz from last exercise</h2>
       <ul>
-        <li>Click <Link target='_blank' href='https://www.mentimeter.com/app/presentation/alrgs6u1swpqyfyqw2xetnmjhbdtsajg/edit?source=share-modal'>here</Link> to open the slides</li>
-        <li>
+        <li><Link target='_blank' href='https://www.mentimeter.com/app/presentation/alrgs6u1swpqyfyqw2xetnmjhbdtsajg'>Mentimeter quiz slides</Link></li>
+        {/* <li>
           <details>
             <summary><span className='link-like'>Click here to see the slides</span></summary>
             <div style={{ padding: '2rem' }}><div style={{ position: 'relative', paddingBottom: '56.25%', paddingTop: '35px', height: 0, overflow: 'hidden' }}><iframe sandbox='allow-scripts allow-same-origin allow-presentation' height='315' src='https://www.mentimeter.com/app/presentation/alrgs6u1swpqyfyqw2xetnmjhbdtsajg/embed' style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', }} width='420'></iframe></div></div>
           </details>
-        </li>
+        </li> */}
       </ul>
 
       <h2>Other stuff</h2>
