@@ -12,8 +12,14 @@ nav {
   border-radius: 0.5rem;
   background-color: #333333;
   font-size: 1.25rem;
-  transition: width 0.2s, margin 0.2s, border-radius 0.2s;
-  -webkit-transition: width 0.2s, margin 0.2s, border-radius 0.2s;
+  transition:
+    width 0.2s,
+    margin 0.2s,
+    border-radius 0.2s;
+  -webkit-transition:
+    width 0.2s,
+    margin 0.2s,
+    border-radius 0.2s;
 }
 nav.sticky {
   margin-left: calc(-1 * var(--border-lr));

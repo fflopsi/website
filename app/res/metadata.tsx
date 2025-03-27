@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { Metadata } from 'next';
 
 export default function getMetadata(
   title: string,
@@ -7,6 +7,6 @@ export default function getMetadata(
   return {
     title: title,
     description: description,
-    authors: [{ name: "Florian Frauenfelder" }],
+    authors: [{ name: 'Florian Frauenfelder' }],
   };
 }

@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
-import DateFooter from "./dateFooter";
-import StickyNavBar from "./stickyNavBar";
+import { ReactNode } from 'react';
+import DateFooter from './dateFooter';
+import StickyNavBar from './stickyNavBar';
 
 export default function Wrapper({
   children,
@@ -19,7 +19,7 @@ export default function Wrapper({
         <h1>{title}</h1>
       </header>
       <StickyNavBar active={route} />
-      <div id="content">{children}</div>
+      <div id='content'>{children}</div>
       <DateFooter date={updated} />
     </>
   );

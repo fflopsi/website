@@ -4,7 +4,7 @@ html {
   scroll-padding-top: 3rem;
   scroll-behavior: smooth;
   background-color: var(--bg);
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   color: var(--text);
 }
 body {
@@ -41,7 +41,9 @@ h3 {
   color: var(--heading);
   padding-top: 1rem;
 }
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   color: var(--heading);
   padding-top: 1rem;
 }
@@ -74,7 +76,7 @@ em {
   border-radius: 4px;
   padding: 2px 4px;
   background-color: #333333;
-  font-family: 'Roboto Mono', 'Menlo', monospace;
+  font-family: "Roboto Mono", "Menlo", monospace;
 }
 a,
 .link-like {
