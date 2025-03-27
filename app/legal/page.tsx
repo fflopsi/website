@@ -2,13 +2,13 @@ import Wrapper from '@/components/wrapper';
 import Link from 'next/link';
 import getMetadata from '../res/metadata';
 
-const title = 'Florian: Legal';
+const title = 'Florian: Legal information';
 
 export const metadata = getMetadata(title);
 
 export default function Impressum() {
   return (
-    <Wrapper title={title} route='/legal/' updated='2025-03-27'>
+    <Wrapper title={title} route='/legal/' updated='2025-03-28'>
       <h2>Contact</h2>
       <details>
         <summary><span className='link-like'>Author's contact information</span></summary>
