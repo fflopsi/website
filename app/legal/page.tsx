@@ -41,7 +41,7 @@ export default function Impressum() {
       </p>
       <h3>Data collection on this website</h3>
       <p>
-        This website is hosted by <Link href={'https://vercel.com'}>Vercel</Link>. In order to optimise and maintain this website, we may log technical errors that may occur when you visit this website. Furthermore, when you use this website, it automatically collects information that your device's browser transmits to the host provider. These are:
+        This website is hosted by <Link target='_blank' href='https://vercel.com'>Vercel</Link>. In order to optimise and maintain this website, we may log technical errors that may occur when you visit this website. Furthermore, when you use this website, it automatically collects information that your device's browser transmits to the host provider. These are:
       </p>
       <ul>
         <li>Event timestamp</li>
@@ -54,7 +54,7 @@ export default function Impressum() {
         <li>Device type</li>
       </ul>
       <p>
-        This data is collected and stored by the host provider in order to optimise processes and procedures, in particular in connection with the use of the website and the security and stability of the computer system. Further information can be found in the <Link href={'https://vercel.com/legal/privacy-policy'}>privacy policy of Vercel</Link> and the <Link href={'https://vercel.com/docs/analytics/privacy-policy'}>analytics privacy policy</Link>. Insofar as the GDPR is applicable, the basis for this data processing is Art. 6 para. 1 lit. f GDPR.
+        This data is collected and stored by the host provider in order to optimise processes and procedures, in particular in connection with the use of the website and the security and stability of the computer system. Further information can be found in the <Link target='_blank' href='https://vercel.com/legal/privacy-policy'>privacy policy of Vercel</Link> and the <Link target='_blank' href='https://vercel.com/docs/analytics/privacy-policy'>analytics privacy policy</Link>. Insofar as the GDPR is applicable, the basis for this data processing is Art. 6 para. 1 lit. f GDPR.
       </p>
       <h3>Contact form</h3>
       <p>
@@ -79,11 +79,11 @@ export default function Impressum() {
       </p>
       <h3>Your rights</h3>
       <p>
-        To the extent provided for by the data protection law applicable to you, you can request information free of charge about the data stored about you, its origin and recipients and the purpose of the data processing. You also have the right to rectification, erasure, restriction of or objection to processing and, if the GDPR applies, to the disclosure of this data for transfer to another organisation, subject to the statutory requirements. You can revoke any consent you have given at any time with effect for the future. All you need to do is send me an informal email. Please note that the above rights are subject to legal restrictions and may impair or prevent the provision of our services. You are entitled to enforce your claims in court or to lodge a complaint with the competent data protection authority. The Swiss Federal Data Protection and Information Commissioner is responsible for Switzerland (<Link href={'http://www.edoeb.admin.ch'}>their website</Link>).
+        To the extent provided for by the data protection law applicable to you, you can request information free of charge about the data stored about you, its origin and recipients and the purpose of the data processing. You also have the right to rectification, erasure, restriction of or objection to processing and, if the GDPR applies, to the disclosure of this data for transfer to another organisation, subject to the statutory requirements. You can revoke any consent you have given at any time with effect for the future. All you need to do is send me an informal email. Please note that the above rights are subject to legal restrictions and may impair or prevent the provision of our services. You are entitled to enforce your claims in court or to lodge a complaint with the competent data protection authority. The Swiss Federal Data Protection and Information Commissioner is responsible for Switzerland (<Link target='_blank' href='http://www.edoeb.admin.ch'>their website</Link>).
       </p>
       <h3>Final provisions</h3>
       <p>
-        I may change or adapt this privacy policy at any time. The current privacy policy can be accessed <Link href={'/legal/'}>here</Link>.
+        I may change or adapt this privacy policy at any time. The current privacy policy can be accessed <Link href='/legal/'>here</Link>.
       </p>
     </Wrapper>
   );
