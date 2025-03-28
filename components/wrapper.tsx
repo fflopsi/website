@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ReactNode } from 'react';
 import DateFooter from './dateFooter';
 import StickyNavBar from './stickyNavBar';
@@ -13,10 +14,11 @@ export default function Wrapper({
   route: string;
   updated: string;
 }) {
+  const titles = title.match(/^Florian(\b.*)/);
   return (
     <>
       <header>
-        <h1>{title}</h1>
+        <h1>{titles ? <><Link href='/' className='normal'>Florian</Link>{titles[1]}</> : title}</h1>
       </header>
       <StickyNavBar active={route} />
       <div id='content'>{children}</div>
