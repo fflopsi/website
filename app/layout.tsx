@@ -1,3 +1,4 @@
+import DevWarning from '@/components/devWarning';
 import type { Metadata } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
 import './res/globals.css';
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${sourceCodePro.className} antialiased`}>
+        <DevWarning />
         {children}
       </body>
     </html>
