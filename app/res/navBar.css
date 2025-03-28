@@ -87,7 +87,7 @@ nav .dropdown:hover .dropdown-content {
 }
 
 /* Responsive layout for smaller screens */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   /* Collapsed navigation menu */
   nav a:not(:first-child) {
     display: none;
