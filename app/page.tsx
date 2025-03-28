@@ -20,6 +20,10 @@ export default function Home() {
         <li>I am a member and <q><abbr title='tour guide'>demonstrator</abbr></q> of the observatory in Bülach (<Link target='_blank' href='https://sternwartebuelach.ch'>Schul- und Volkssternwarte Bülach</Link>) and I sometimes do tours (public and private). Some of the material I've created is available <Link href='/astro/'>here</Link>.</li>
         <li>I have been teaching myself how to code since about 2016. If you are interested in what I have created so far, <Link href='/coding/'>have a look</Link>.</li>
       </ul>
+      <h2>About this website</h2>
+      <p>I built this website using <Link target='_blank' href='https://nextjs.org'>Next.js</Link>, it is hosted by <Link target='_blank' href='https://vercel.com'>Vercel</Link> and the domain is registered by <Link target='_blank' href='https://infomaniak.com'>infomaniak</Link> in Switzerland.</p>
+      <p>The source code for this website is available <Link target='_blank' href='https://github.com/fflopsi/website'>on GitHub</Link>.</p>
+      <p>The development version of this website can be accessed <Link href='https://dev.florian-frauenfelder.ch'>here</Link>. It may contain new and potentially unstable features and/or lag behind in both content and features, so use it at your own risk.</p>
       <h2>Contact</h2>
       <ul>
         <li><Link href='mailto:ffrauenfelde@student.ethz.ch'>ffrauenfelde@student.ethz.ch</Link></li>
