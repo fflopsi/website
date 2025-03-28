@@ -33,6 +33,7 @@ export default function NavBar(active: String) {
       <Link href='/ta/' className={match('/ta/')}>Teaching Assistant</Link>
       <Link href='/coding/' className={match('/coding/')}>Hobby Coder</Link>
       <Link href='/astro/' className={match('/astro/')}>Hobby Astronomer</Link>
+      <Link id='legal' href='/legal/' className={match('/legal/')}>Legal</Link>
       <button className='icon' onClick={() => {
         if (navRef.current) {
           navRef.current.classList.toggle('responsive');

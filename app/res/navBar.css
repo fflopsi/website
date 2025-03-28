@@ -42,6 +42,9 @@ nav button.icon
   color: var(--link);
   text-decoration: none;
 }
+nav a#legal {
+  float: right;
+}
 nav .dropdown {
   float: left;
   overflow: hidden;
@@ -89,6 +92,9 @@ nav .dropdown:hover .dropdown-content {
   nav a:not(:first-child) {
     display: none;
   }
+  nav a#legal {
+    float: left;
+  }
   nav a.active {
     float: left;
     display: block;
@@ -101,7 +107,8 @@ nav .dropdown:hover .dropdown-content {
   }
 
   /* Extended navigation menu */
-  nav.responsive a {
+  nav.responsive a,
+  nav.responsive a#legal {
     float: none;
     display: block;
   }
