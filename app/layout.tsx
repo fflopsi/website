@@ -1,9 +1,9 @@
 import DevWarning from '@/components/devWarning';
 import type { Metadata } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
-import './res/globals.css';
-import './res/navBar.css';
-import './res/var.css';
+import './res/globals.scss';
+import './res/navBar.scss';
+// import './res/colors.scss';
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ['latin'],
