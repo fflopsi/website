@@ -19,8 +19,8 @@ export default function Wrapper({
     <>
       <header>
         <h1>{titles ? <><Link href='/' className='normal'>Florian</Link>{titles[1]}</> : title}</h1>
+        <StickyNavBar active={route} />
       </header>
-      <StickyNavBar active={route} />
       <div id='content'>{children}</div>
       <DateFooter date={updated} />
     </>
