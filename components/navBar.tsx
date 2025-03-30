@@ -7,13 +7,6 @@ export default function NavBar(active: String) {
       ? 'active'
       : '';
 
-  const navLinks = {
-    '/': 'Home',
-    '/ta/': 'Teaching Assistant',
-    '/coding/': 'Hobby Coder',
-    '/astro/': 'Hobby Astronomer',
-  }
-
   const navRef = useRef<HTMLElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
