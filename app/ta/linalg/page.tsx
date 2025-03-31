@@ -47,7 +47,7 @@ export default function LinAlg() {
 
       <h2 id='material'>Exercise material</h2>
       <ul>
-        <Handouts max={5} />
+        <Handouts max={6} />
       </ul>
 
       {/* <h2>Other stuff</h2>
