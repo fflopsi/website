@@ -27,7 +27,7 @@ function Handouts({ max }: { max: number }) {
 
 export default function LinAlg() {
   return (
-    <Wrapper title={title} route='/ta/linalg/' updated='2025-03-24'>
+    <Wrapper title={title} route='/ta/linalg/' updated='2025-03-31'>
       <h2>Updates</h2>
       <ul>
         <li>
