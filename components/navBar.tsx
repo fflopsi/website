@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRef, useState } from 'react';
 
-export default function NavBar(active: string) {
+export default function NavBar({ active }: { active: string }) {
   console.log(active);
   const match = (href: string): 'active' | '' =>
     href && (active === href || (active.includes(href) && href.length >= 3))

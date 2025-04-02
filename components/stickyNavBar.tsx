@@ -34,5 +34,5 @@ export default function StickyNavBar() {
   ];
   const path = usePathname();
   console.log(path);
-  return NavBar(navLinks.includes(path) ? path : '/404/');
+  return <NavBar active={navLinks.includes(path) ? path : '/404/'} />;
 }
