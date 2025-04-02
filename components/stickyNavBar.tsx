@@ -33,5 +33,6 @@ export default function StickyNavBar() {
     '/legal/',
   ];
   const path = usePathname();
+  console.log(path);
   return NavBar(navLinks.includes(path) ? path : '/404/');
 }
