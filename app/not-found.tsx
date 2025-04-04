@@ -1,4 +1,3 @@
-import Wrapper from '@/components/wrapper';
 import Link from 'next/link';
 import getMetadata from './res/metadata';
 
