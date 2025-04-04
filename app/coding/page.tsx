@@ -5,6 +5,7 @@ import getMetadata from '../res/metadata';
 
 const title = 'Florian: Coding';
 
+export const dynamic = 'force-dynamic';
 export const metadata = getMetadata(title, 'Florian\'s hobby coding journey');
 
 type Repo = {
