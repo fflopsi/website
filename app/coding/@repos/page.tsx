@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+export const dynamic = 'force-dynamic';
+
 // Fetch and display GitHub repositories in a formatted list
 async function fetchRepositories() {
   type Repo = {
