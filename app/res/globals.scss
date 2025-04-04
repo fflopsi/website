@@ -1,20 +1,22 @@
 @use "tailwindcss";
-@use "colors.scss";
+@use "vars.scss";
 /* Large scale tags */
 html {
   scroll-padding-top: 3rem;
   scroll-behavior: smooth;
-  background-color: colors.$bg;
+  background-color: vars.$bg;
   font-family: "Source Code Pro", monospace;
-  color: colors.$text;
+  color: vars.$text;
 }
 body {
   height: 100%;
   margin: 0;
-  padding-left: colors.$border-lr;
-  padding-right: colors.$border-lr;
-  padding-top: 4vh;
-  padding-bottom: 8vh;
+  padding: {
+    left: vars.$border-lr;
+    right: vars.$border-lr;
+    top: 4vh;
+    bottom: 8vh;
+  }
 }
 #content {
   padding-left: 1vw;
@@ -22,30 +24,25 @@ body {
 }
 
 /* Headings */
-h1 {
-  font-size: 2rem;
+@mixin heading {
   font-weight: bold;
-  color: colors.$title;
-  margin-top: 1rem;
+  color: vars.$heading;
   margin-bottom: 1rem;
+}
+h1 {
+  @include heading;
+  font-size: 2rem;
+  color: vars.$title;
+  margin-top: 1rem;
 }
 h2 {
+  @include heading;
   font-size: 1.5rem;
-  font-weight: bold;
-  color: colors.$heading;
   padding-top: 2rem;
-  margin-bottom: 1rem;
 }
 h3 {
+  @include heading;
   font-size: 1.2rem;
-  font-weight: bold;
-  color: colors.$heading;
-  padding-top: 1rem;
-}
-h4,
-h5,
-h6 {
-  color: colors.$heading;
   padding-top: 1rem;
 }
 
@@ -65,15 +62,15 @@ p {
   margin-bottom: 1rem;
 }
 .normal {
-  color: colors.$title;
+  color: vars.$title;
   text-decoration: none;
 }
 em {
-  color: colors.$title;
+  color: vars.$title;
   font-style: normal;
 }
 .cpp-code {
-  color: colors.$hover;
+  color: vars.$hover;
   border-radius: 4px;
   padding: 2px 4px;
   background-color: #333333;
@@ -81,17 +78,14 @@ em {
 }
 a,
 .link-like {
-  color: colors.$link;
+  color: vars.$link;
   text-decoration: underline;
   transition: color 0.2s;
   -webkit-transition: color 0.2s;
-}
-a:hover,
-.link-like:hover {
-  color: colors.$hover;
-  text-decoration: none;
-  transition: color 0.2s;
-  -webkit-transition: color 0.2s;
+  &:hover {
+    color: vars.$hover;
+    text-decoration: none;
+  }
 }
 
 /* Other */
