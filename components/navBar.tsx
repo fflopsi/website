@@ -19,7 +19,8 @@ export default function NavBar() {
         else nav.classList.remove('sticky');
       }
     };
-    handleScroll(); // To correctly apply stickyness after reload
+    // Correctly apply stickyness after reload
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -29,6 +30,11 @@ export default function NavBar() {
   const path = usePathname();
   const navRef = useRef<HTMLElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    // Close navBar after route change
+    setIsOpen(false);
+    navRef?.current?.classList.remove('responsive');
+  }, [path])
 
   return (
     <nav ref={navRef}>
