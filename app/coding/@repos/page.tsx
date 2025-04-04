@@ -1,5 +1,3 @@
-'use client';
-
 import Link from "next/link";
 
 // Fetch and display GitHub repositories in a formatted list
