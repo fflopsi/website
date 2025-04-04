@@ -1,11 +1,24 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import NavBar from './navBar';
 
 export default function StickyNavBar() {
+  const navLinks = [
+    '/',
+    '/ta/',
+    '/ta/informatik/',
+    '/ta/linalg/',
+    '/coding/',
+    '/astro/',
+    '/legal/',
+  ];
+
+  const [path, setPath] = useState(usePathname());
+
   useEffect(() => {
+    console.log('window.location.pathname:', window.location.pathname);
     const handleScroll = () => {
       const nav = document.querySelector('nav');
       if (nav) {
@@ -23,16 +36,6 @@ export default function StickyNavBar() {
     };
   }, []);
 
-  const navLinks = [
-    '/',
-    '/ta/',
-    '/ta/informatik/',
-    '/ta/linalg/',
-    '/coding/',
-    '/astro/',
-    '/legal/',
-  ];
-  const path = usePathname();
   console.log(path);
   return <NavBar active={navLinks.includes(path) ? path : '/404/'} />;
 }
