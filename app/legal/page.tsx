@@ -1,4 +1,3 @@
-import Wrapper from '@/components/wrapper';
 import Link from 'next/link';
 import getMetadata from '../res/metadata';
 
@@ -8,7 +7,7 @@ export const metadata = getMetadata(title);
 
 export default function Impressum() {
   return (
-    <Wrapper title={title} route='/legal/' updated='2025-03-28'>
+    <>
       <h2>Contact</h2>
       <details>
         <summary><span className='link-like'>Author's contact information</span></summary>
@@ -85,6 +84,6 @@ export default function Impressum() {
       <p>
         I may change or adapt this privacy policy at any time. The current privacy policy can be accessed <Link href='/legal/'>here</Link>.
       </p>
-    </Wrapper>
+    </>
   );
 }

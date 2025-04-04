@@ -1,5 +1,4 @@
 import getMetadata from '@/app/res/metadata';
-import Wrapper from '@/components/wrapper';
 import Link from 'next/link';
 import { JSX } from 'react/jsx-dev-runtime';
 
@@ -27,7 +26,7 @@ function Handouts({ max }: { max: number }) {
 
 export default function LinAlg() {
   return (
-    <Wrapper title={title} route='/ta/linalg/' updated='2025-03-24'>
+    <>
       <h2>Updates</h2>
       <ul>
         <li>
@@ -73,6 +72,6 @@ export default function LinAlg() {
         <li>14:15 - 16:00</li>
         <li><Link target='_blank' href='https://ethz.ch/staffnet/en/utils/location.html?building=CHN&floor=D&room=46'>CHN D 46</Link></li>
       </ul>
-    </Wrapper>
+    </>
   );
 }

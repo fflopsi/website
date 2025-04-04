@@ -1,9 +1,11 @@
 import DevWarning from '@/components/devWarning';
+import Footer from '@/components/footer';
+import NavBar from '@/components/navBar';
+import Title from '@/components/title';
 import type { Metadata } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
 import './res/globals.scss';
 import './res/navBar.scss';
-// import './res/colors.scss';
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ['latin'],
@@ -11,7 +13,7 @@ const sourceCodePro = Source_Code_Pro({
 
 export const metadata: Metadata = {
   title: 'Florian Frauenfelder',
-  description: 'Florian\'s personal website',
+  description: "Florian's personal website",
 };
 
 export default function RootLayout({
@@ -23,7 +25,12 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${sourceCodePro.className} antialiased`}>
         <DevWarning />
-        {children}
+        <header>
+          <Title />
+        </header>
+        <NavBar />
+        <div id='content'>{children}</div>
+        <Footer />
       </body>
     </html>
   );

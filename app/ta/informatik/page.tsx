@@ -1,5 +1,4 @@
 import getMetadata from '@/app/res/metadata';
-import Wrapper from '@/components/wrapper';
 import Link from 'next/link';
 
 const title = 'Florian: Informatik TA';
@@ -8,7 +7,7 @@ export const metadata = getMetadata(title, 'Florian\'s TA material for Informati
 
 export default function Informatik() {
   return (
-    <Wrapper title={title} route='/ta/informatik/' updated='2024-12-18'>
+    <>
       <h2>Updates</h2>
       <ul>
         <li>
@@ -122,6 +121,6 @@ export default function Informatik() {
         <li>16:15 - 18:00</li>
         <li><Link target='_blank' href='https://ethz.ch/staffnet/en/utils/location.html?building=CAB&floor=G&room=59'>CAB G 59</Link></li>
       </ul> */}
-    </Wrapper>
+    </>
   );
 }

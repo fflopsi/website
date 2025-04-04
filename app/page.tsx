@@ -1,4 +1,3 @@
-import Wrapper from '@/components/wrapper';
 import Link from 'next/link';
 import getMetadata from './res/metadata';
 
@@ -8,7 +7,7 @@ export const metadata = getMetadata(title, 'Florian Frauenfelder\'s personal web
 
 export default function Home() {
   return (
-    <Wrapper title={title} route='/' updated='2025-03-11'>
+    <>
       <h2>About me</h2>
       <p>Hey there, lone traveler! How did you get here?</p>
       <p>Some things about me I think may be worth knowing (not in any particular order):</p>
@@ -28,6 +27,6 @@ export default function Home() {
       <ul>
         <li><Link href='mailto:ffrauenfelde@student.ethz.ch'>ffrauenfelde@student.ethz.ch</Link></li>
       </ul>
-    </Wrapper>
+    </>
   );
 }
