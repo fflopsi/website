@@ -1,5 +1,5 @@
+import getMetadata from '@/components/metadata';
 import Link from 'next/link';
-import getMetadata from '../res/metadata';
 
 const title = 'Florian: Astronomy';
 

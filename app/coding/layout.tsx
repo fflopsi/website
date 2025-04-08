@@ -1,5 +1,5 @@
+import getMetadata from '@/components/metadata';
 import React from 'react';
-import getMetadata from '../res/metadata';
 
 const title = 'Florian: Coding';
 

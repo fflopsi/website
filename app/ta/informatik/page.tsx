@@ -1,4 +1,4 @@
-import getMetadata from '@/app/res/metadata';
+import getMetadata from '@/components/metadata';
 import Link from 'next/link';
 
 const title = 'Florian: Informatik TA';

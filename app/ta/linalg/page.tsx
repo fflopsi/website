@@ -1,4 +1,4 @@
-import getMetadata from '@/app/res/metadata';
+import getMetadata from '@/components/metadata';
 import { list } from '@vercel/blob';
 import Link from 'next/link';
 
