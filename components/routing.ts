@@ -26,7 +26,7 @@ export const navigation: Navigation = {
       '/ta/linalg/': {
         title: 'Florian: Lineare Algebra II TA',
         navTitle: 'Lineare Algebra II',
-        updated: '2025-03-24',
+        updated: '2025-04-08',
       },
     },
   },
