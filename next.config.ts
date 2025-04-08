@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   redirects: async () => [
     {
-      source: '/(contact|copyright|disclaimer|privacy|impressum)/',
+      source: '/(copyright|disclaimer|privacy|impressum)/',
       destination: '/legal/',
       permanent: true,
     },
