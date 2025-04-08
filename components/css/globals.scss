@@ -80,6 +80,7 @@ a,
 .link-like {
   color: vars.$link;
   text-decoration: underline;
+  cursor: pointer;
   transition: color 0.2s;
   -webkit-transition: color 0.2s;
   &:hover {
