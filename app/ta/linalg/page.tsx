@@ -1,30 +1,13 @@
 import getMetadata from '@/app/res/metadata';
+import { list } from '@vercel/blob';
 import Link from 'next/link';
-import { JSX } from 'react/jsx-dev-runtime';
 
 const title = 'Florian: Lineare Algebra II TA';
 
 export const metadata = getMetadata(title, 'Florian\'s TA material for Lineare Algebra II');
 
-function* range(start: number, end: number, end_included: boolean = true) {
-  for (let i = start; end_included ? i <= end : i < end; i++) yield i;
-}
-
-const pad = (n: number) => n.toLocaleString('en-GB', { minimumIntegerDigits: 2, useGrouping: false });
-
-function Handouts({ max }: { max: number }) {
-  let e: JSX.Element[] = [];
-  for (const n of range(1, max, true)) {
-    e.push(
-      <li key={n}>
-        [ES{pad(n)}] <Link href={'handout-' + pad(n) + '.pdf'}>Handout</Link>
-      </li>
-    );
-  }
-  return e;
-}
-
-export default function LinAlg() {
+export default async function LinAlg() {
+  const handouts = await list({ prefix: 'ta/linalg/' });
   return (
     <>
       <h2>Updates</h2>
@@ -46,7 +29,15 @@ export default function LinAlg() {
 
       <h2 id='material'>Exercise material</h2>
       <ul>
-        <Handouts max={5} />
+        {handouts.blobs.map((blob) => {
+          const match = blob.pathname.match(/ta\/linalg\/handout-(\d{2})\.pdf/);
+          if (match)
+            return (
+              <li key={blob.pathname}>
+                [ES{match[1]}] <a href={blob.url}>Handout</a>
+              </li>
+            );
+        })}
       </ul>
 
       {/* <h2>Other stuff</h2>
