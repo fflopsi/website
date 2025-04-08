@@ -40,6 +40,11 @@ export const navigation: Navigation = {
     navTitle: 'Hobby Coder',
     updated: '2025-03-10',
   },
+  '/contact/': {
+    title: 'Florian: Contact form',
+    navTitle: 'Contact',
+    updated: '2025-04-09',
+  },
   '/legal/': {
     title: 'Florian: Legal information',
     navTitle: 'Legal',

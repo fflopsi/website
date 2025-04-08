@@ -63,6 +63,13 @@ export default function NavBar() {
       <Link id='legal' href='/legal/' className={matchPath(path, '/legal/')}>
         Legal
       </Link>
+      <Link
+        id='contact'
+        href='/contact/'
+        className={matchPath(path, '/contact/')}
+      >
+        Contact
+      </Link>
       <button
         className='icon'
         onClick={() => {
