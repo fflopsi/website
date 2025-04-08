@@ -1,25 +1,46 @@
+'use client';
+
 import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
 
-export default function NavBar(active: String) {
-  const match = (href: string): 'active' | '' =>
-    href && (active === href || (active.includes(href) && href.length >= 3))
-      ? 'active'
-      : '';
+const matchPath = (current: string, link: string): 'active' | '' =>
+  link && (current === link || (current.startsWith(link) && link.length >= 3))
+    ? 'active'
+    : '';
 
-  const navLinks = {
-    '/': 'Home',
-    '/ta/': 'Teaching Assistant',
-    '/coding/': 'Hobby Coder',
-    '/astro/': 'Hobby Astronomer',
-  }
+export default function NavBar() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const nav = document.querySelector('nav');
+      if (nav) {
+        // Add sticky class to navbar when on top of screen
+        if (nav.getBoundingClientRect().top <= 0) nav.classList.add('sticky');
+        else nav.classList.remove('sticky');
+      }
+    };
+    // Correctly apply stickyness after reload
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
+  const path = usePathname();
   const navRef = useRef<HTMLElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    // Close navBar after route change
+    setIsOpen(false);
+    navRef?.current?.classList.remove('responsive');
+  }, [path])
 
   return (
     <nav ref={navRef}>
-      <Link href='/' className={match('/')}>Home</Link>
+      <Link href='/' className={matchPath(path, '/')}>
+        Home
+      </Link>
       {/* <div class='dropdown'>
         <button class='dropbtn'>Teaching Assistant
           <i class='fa fa-caret-down'></i>
@@ -30,17 +51,28 @@ export default function NavBar(active: String) {
           <a href='/ta/'><i>Overview</i></a>
         </div>
       </div> */}
-      <Link href='/ta/' className={match('/ta/')}>Teaching Assistant</Link>
-      <Link href='/coding/' className={match('/coding/')}>Hobby Coder</Link>
-      <Link href='/astro/' className={match('/astro/')}>Hobby Astronomer</Link>
-      <Link id='legal' href='/legal/' className={match('/legal/')}>Legal</Link>
-      <button className='icon' onClick={() => {
-        if (navRef.current) {
-          navRef.current.classList.toggle('responsive');
-          setIsOpen(!isOpen);
-        }
-      }}>
-        { isOpen ? '\u25b2' : '\u25bc' }
+      <Link href='/ta/' className={matchPath(path, '/ta/')}>
+        Teaching Assistant
+      </Link>
+      <Link href='/coding/' className={matchPath(path, '/coding/')}>
+        Hobby Coder
+      </Link>
+      <Link href='/astro/' className={matchPath(path, '/astro/')}>
+        Hobby Astronomer
+      </Link>
+      <Link id='legal' href='/legal/' className={matchPath(path, '/legal/')}>
+        Legal
+      </Link>
+      <button
+        className='icon'
+        onClick={() => {
+          if (navRef.current) {
+            navRef.current.classList.toggle('responsive');
+            setIsOpen(!isOpen);
+          }
+        }}
+      >
+        {isOpen ? '\u25b2' : '\u25bc'}
       </button>
     </nav>
   );

@@ -1,6 +1,5 @@
-import Wrapper from '@/components/wrapper';
+import getMetadata from '@/components/metadata';
 import Link from 'next/link';
-import getMetadata from '../res/metadata';
 
 const title = 'Florian: Astronomy';
 
@@ -8,7 +7,7 @@ export const metadata = getMetadata(title, 'Florian\'s hobby astronomer journey'
 
 export default function Astro() {
   return (
-    <Wrapper title={title} route='/astro/' updated='2025-03-22'>
+    <>
       <h2>My history with astronomy</h2>
 
       <p>Ever since I was a child, I have had a passion for astronomy. In 2014, I joined the <Link target='_blank' href='https://sternwartebuelach.ch'>observatory in Bülach</Link> as a junior member. Each Saturday, the teenagers and young adults meet and learn something about astronomy and its related fields in physics and sciences in general.</p>
@@ -27,6 +26,6 @@ export default function Astro() {
         <li>A short presentation on dark energy, the geometry of the universe and the Hubble tension (<Link href='3-dark-energy-geometry-hubble-pres.pdf'>slides</Link> and <Link href='3-dark-energy-geometry-hubble-handout.pdf'>handout</Link>)</li>
         <li>A short presentation on gravitational waves: theory, origin and observation (<Link href='4-gravitational-waves-pres.pdf'>slides</Link> and <Link href='4-gravitational-waves-handout.pdf'>handout</Link>)</li>
       </ul>
-    </Wrapper>
+    </>
   );
 }

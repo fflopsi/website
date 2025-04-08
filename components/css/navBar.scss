@@ -1,0 +1,92 @@
+@use "tailwindcss";
+@use "vars.scss";
+$border: 1px solid #666666;
+nav {
+  overflow: hidden;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  width: 100%;
+  top: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+  border: $border;
+  border-radius: 0.5rem;
+  background-color: #333333;
+  font-size: 1.25rem;
+  transition:
+    width 0.2s,
+    margin 0.2s,
+    border-radius 0.2s;
+  -webkit-transition:
+    width 0.2s,
+    margin 0.2s,
+    border-radius 0.2s;
+  &.sticky {
+    margin-left: calc(-1 * vars.$border-lr);
+    width: 100vw;
+    border: none {
+      bottom: $border;
+      radius: 0;
+    }
+    box-shadow: 0 8px 12px #242424;
+  }
+  /* Single nav tags */
+  a,
+  button.icon {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    float: left;
+    display: block;
+    color: vars.$link;
+    text-decoration: none;
+    &#legal {
+      float: right;
+    }
+    &.active {
+      background-color: vars.$title;
+      color: white;
+    }
+    &:hover:not(.active) {
+      background-color: #444444;
+    }
+  }
+  button.icon {
+    display: none;
+  }
+  /* Responsive layout for smaller screens */
+  @media screen and (max-width: 900px) {
+    /* Collapsed navigation menu */
+    a {
+      &:not(:first-child) {
+        display: none;
+      }
+      &.active {
+        float: left;
+        display: block;
+      }
+      &#legal {
+        float: left;
+      }
+    }
+    button.icon {
+      float: right;
+      display: block;
+      border-left: $border;
+      background-color: #333333;
+    }
+    /* Extended navigation menu */
+    &.responsive {
+      a,
+      a#legal {
+        float: none;
+        display: block;
+      }
+      button.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-bottom: $border;
+      }
+    }
+  }
+}
