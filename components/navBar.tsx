@@ -34,7 +34,7 @@ export default function NavBar() {
     // Close navBar after route change
     setIsOpen(false);
     navRef?.current?.classList.remove('responsive');
-  }, [path])
+  }, [path]);
 
   return (
     <nav ref={navRef}>

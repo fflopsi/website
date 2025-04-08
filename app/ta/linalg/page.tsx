@@ -4,7 +4,10 @@ import Link from 'next/link';
 
 const title = 'Florian: Lineare Algebra II TA';
 
-export const metadata = getMetadata(title, 'Florian\'s TA material for Lineare Algebra II');
+export const metadata = getMetadata(
+  title,
+  "Florian's TA material for Lineare Algebra II",
+);
 
 export default async function LinAlg() {
   const handouts = await list({ prefix: 'ta/linalg/' });
@@ -15,8 +18,16 @@ export default async function LinAlg() {
         <li>
           <em>[25.02.2025]</em>
           <ul>
-            <li>Since my exercise session is held in German, all the handouts and material will also be in German.</li>
-            <li>Added <Link href='#links'>links</Link>, <Link href='#session'>exercise session info</Link>, and <Link href='#material'>material</Link> for the first exercise session.</li>
+            <li>
+              Since my exercise session is held in German, all the handouts and
+              material will also be in German.
+            </li>
+            <li>
+              Added <Link href='#links'>links</Link>,{' '}
+              <Link href='#session'>exercise session info</Link>, and{' '}
+              <Link href='#material'>material</Link> for the first exercise
+              session.
+            </li>
           </ul>
         </li>
         <li>
@@ -34,34 +45,54 @@ export default async function LinAlg() {
           if (match)
             return (
               <li key={blob.pathname}>
-                [ES{match[1]}] <a href={blob.url}>Handout</a>
+                [ES{match[1]}] <Link href={blob.url}>Handout</Link>
               </li>
             );
         })}
       </ul>
 
       {/* <h2>Other stuff</h2>
-        <ul>
-          <li>
-            [My cheatsheet] <Link href='CheatSheet.pdf'>PDF</Link> | <Link href='CheatSheet.tex'>LaTeX source</Link>
-          </li>
-        </ul> */}
+      <ul>
+        <li>
+          [My cheatsheet] <Link href='CheatSheet.pdf'>PDF</Link> |{' '}
+          <Link href='CheatSheet.tex'>LaTeX source</Link>
+        </li>
+      </ul> */}
 
       <h2 id='links'>Useful links</h2>
       <ul>
-        <li><Link target='_blank' href='https://metaphor.ethz.ch/x/2024/hs/401-1151-00L/'>Course website</Link> with all the material that you can't find on here</li>
+        <li>
+          <Link
+            target='_blank'
+            href='https://metaphor.ethz.ch/x/2024/hs/401-1151-00L/'
+          >
+            Course website
+          </Link>{' '}
+          with all the material that you can't find on here
+        </li>
       </ul>
 
       <h2>Contact</h2>
       <ul>
-        <li><Link href='mailto:ffrauenfelde@student.ethz.ch'>ffrauenfelde@student.ethz.ch</Link></li>
+        <li>
+          <Link href='mailto:ffrauenfelde@student.ethz.ch'>
+            ffrauenfelde@student.ethz.ch
+          </Link>
+        </li>
       </ul>
 
       <h2 id='session'>Exercise session</h2>
       <ul>
         <li>Monday</li>
         <li>14:15 - 16:00</li>
-        <li><Link target='_blank' href='https://ethz.ch/staffnet/en/utils/location.html?building=CHN&floor=D&room=46'>CHN D 46</Link></li>
+        <li>
+          <Link
+            target='_blank'
+            href='https://ethz.ch/staffnet/en/utils/location.html?building=CHN&floor=D&room=46'
+          >
+            CHN D 46
+          </Link>
+        </li>
       </ul>
     </>
   );

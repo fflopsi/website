@@ -52,10 +52,7 @@ export const navigation: Navigation = {
   },
 };
 
-function isValidPath(
-  path: string,
-  nav: Navigation = navigation,
-): boolean {
+function isValidPath(path: string, nav: Navigation = navigation): boolean {
   for (const key in nav) {
     if (key === path) return true;
     if (nav[key].sub && isValidPath(path, nav[key].sub)) {
