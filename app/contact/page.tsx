@@ -4,6 +4,11 @@ import Form from 'next/form';
 
 export const metadata = getMetadata(getAttr('/contact/', 'title'));
 
+async function submit() {
+  'use server';
+  console.log('Form submitted');
+}
+
 export default function Contact() {
   return (
     <>
@@ -12,7 +17,7 @@ export default function Contact() {
         If you have any questions, remarks, suggestions or spotted a bug on my
         website, you can use this contact form to send me a message:
       </p>
-      <Form action='/contact'>
+      <Form action={submit}>
         <div className='form-grid'>
           <label htmlFor='name'>Name *: </label>
           <input
@@ -46,7 +51,7 @@ export default function Contact() {
           id='message'
           name='message'
           placeholder={`Your message to me...\nDon't share any sensitive info like passwords and such.`}
-          rows={3}
+          rows={4}
           cols={64}
           required
         />
