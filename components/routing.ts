@@ -77,7 +77,8 @@ export function getAttr(path: string, attr: 'title' | 'navTitle' | 'updated') {
     }
     return '';
   }
-  if (path.split('/').length <= 3) {
+  const pathArr = path.split('/');
+  if (pathArr.length <= 3) {
     switch (attr) {
       case 'title':
         return navigation[path].title;
@@ -87,14 +88,14 @@ export function getAttr(path: string, attr: 'title' | 'navTitle' | 'updated') {
         return navigation[path].updated;
     }
   }
-  if (path.split('/').length === 4) {
+  if (pathArr.length === 4) {
     switch (attr) {
       case 'title':
-        return navigation['/ta/'].sub![path].title;
+        return navigation[`/${pathArr[1]}/`].sub![path].title;
       case 'navTitle':
-        return navigation['/ta/'].sub![path].navTitle;
+        return navigation[`/${pathArr[1]}/`].sub![path].navTitle;
       case 'updated':
-        return navigation['/ta/'].sub![path].updated;
+        return navigation[`/${pathArr[1]}/`].sub![path].updated;
     }
   }
   return '';
