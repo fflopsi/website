@@ -43,12 +43,12 @@ export const navigation: Navigation = {
   '/contact/': {
     title: 'Florian: Contact form',
     navTitle: 'Contact',
-    updated: '2025-04-09',
+    updated: '2025-04-10',
   },
   '/legal/': {
     title: 'Florian: Legal information',
     navTitle: 'Legal',
-    updated: '2025-03-28',
+    updated: '2025-04-10',
   },
   '/404/': {
     title: "404: This didn't work.",
