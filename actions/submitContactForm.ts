@@ -15,7 +15,7 @@ export async function submitContactForm(
   previousState: FormState,
   formData: FormData,
 ): Promise<FormState> {
-  const resend = new Resend(process.env.RESEND_TOKEN);
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     resend.emails.send({
       from: `${formData.get('name')?.toString() ?? 'Some user of the website'} <form@contact.florian-frauenfelder.ch>`,
