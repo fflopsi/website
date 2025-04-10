@@ -97,8 +97,8 @@ form {
     align-items: center;
     column-gap: 1rem;
     margin-bottom: 0.5rem;
-    @media screen and (max-width: 400px) {
-      grid-template-columns: max-content;
+    @media screen and (max-width: 590px) {
+      display: block;
     }
   }
   label {
@@ -112,6 +112,9 @@ form {
     padding: 2px 4px;
     border-radius: 6px;
     min-width: 24rem;
+    @media screen and (max-width: 590px) {
+      min-width: 100%;
+    }
   }
   select {
     cursor: pointer;
