@@ -1,9 +1,7 @@
-import getMetadata from '@/components/metadata';
+import { getRouteMetadata } from '@/lib/routing';
 import Link from 'next/link';
 
-const title = 'Florian: Teaching Assistant';
-
-export const metadata = getMetadata(title, "Florian's TA jobs at ETHZ");
+export const metadata = getRouteMetadata('/ta/');
 
 export default function TA() {
   return (

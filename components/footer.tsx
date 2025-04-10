@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { getAttr } from './routing';
+import { getAttr } from '@/lib/routing';
 
 export default function Footer() {
   return (
@@ -13,6 +13,7 @@ export default function Footer() {
       <footer>
         &copy; 2025 Florian Frauenfelder // Updated:{' '}
         {getAttr(usePathname(), 'updated')} // <Link href='/'>Home</Link> //{' '}
+        <Link href='/contact/'>Contact form</Link> //{' '}
         <Link href='/legal/'>
           Legal: Contact, Copyright, Disclaimer, Privacy policy
         </Link>

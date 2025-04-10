@@ -1,9 +1,7 @@
-import getMetadata from '@/components/metadata';
+import { getRouteMetadata } from '@/lib/routing';
 import Link from 'next/link';
 
-const title = "404: This didn't work.";
-
-export const metadata = getMetadata(title);
+export const metadata = getRouteMetadata('/404/');
 
 export default function Custom404() {
   return (

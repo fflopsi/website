@@ -1,14 +1,15 @@
-import getMetadata from '@/components/metadata';
+import { getRouteMetadata } from '@/lib/routing';
 import Link from 'next/link';
 
-const title = 'Florian: Legal information';
-
-export const metadata = getMetadata(title);
+export const metadata = getRouteMetadata('/legal/');
 
 export default function Impressum() {
   return (
     <>
       <h2>Contact</h2>
+      <p>
+        A contact form can be found <Link href='/contact/'>here</Link>.
+      </p>
       <details>
         <summary>
           <span className='link-like'>Author's contact information</span>
@@ -107,10 +108,11 @@ export default function Impressum() {
       </p>
       <h3>Contact form</h3>
       <p>
-        If you use the contact form on this website, your details from the
-        enquiry form will be processed by the author of the website for the
-        purpose of handling your enquiry and in the event of follow-up
-        questions. As a rule, this usually requires the following information:
+        If you use the <Link href='/contact/'>contact form</Link> on this
+        website, your details from the enquiry form will be processed by the
+        author of the website for the purpose of handling your enquiry and in
+        the event of follow-up questions. As a rule, this usually requires the
+        following information:
       </p>
       <ul>
         <li>First name and surname</li>

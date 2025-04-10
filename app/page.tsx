@@ -1,12 +1,7 @@
-import getMetadata from '@/components/metadata';
+import { getRouteMetadata } from '@/lib/routing';
 import Link from 'next/link';
 
-const title = 'Florian Frauenfelder';
-
-export const metadata = getMetadata(
-  title,
-  "Florian Frauenfelder's personal website",
-);
+export const metadata = getRouteMetadata('/');
 
 export default function Home() {
   return (

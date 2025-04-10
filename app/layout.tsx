@@ -1,20 +1,15 @@
-import '@/components/css/globals.scss';
-import '@/components/css/navBar.scss';
 import DevWarning from '@/components/devWarning';
 import Footer from '@/components/footer';
-import getMetadata from '@/components/metadata';
 import NavBar from '@/components/navBar';
 import Title from '@/components/title';
+import { getRouteMetadata } from '@/lib/routing';
+import '@/style/globals.scss';
+import '@/style/navBar.scss';
 import { Source_Code_Pro } from 'next/font/google';
 
-const sourceCodePro = Source_Code_Pro({
-  subsets: ['latin'],
-});
+const sourceCodePro = Source_Code_Pro({ subsets: ['latin'] });
 
-export const metadata = getMetadata(
-  'Florian Frauenfelder',
-  "Florian's personal website",
-);
+export const metadata = getRouteMetadata('/');
 
 export default function RootLayout({
   children,

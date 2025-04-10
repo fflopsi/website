@@ -39,7 +39,8 @@ nav {
     display: block;
     color: vars.$link;
     text-decoration: none;
-    &#legal {
+    &#legal,
+    &#contact {
       float: right;
     }
     &.active {
@@ -54,7 +55,7 @@ nav {
     display: none;
   }
   /* Responsive layout for smaller screens */
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1024px) {
     /* Collapsed navigation menu */
     a {
       &:not(:first-child) {
@@ -64,7 +65,8 @@ nav {
         float: left;
         display: block;
       }
-      &#legal {
+      &#legal,
+      &#contact {
         float: left;
       }
     }
@@ -77,7 +79,8 @@ nav {
     /* Extended navigation menu */
     &.responsive {
       a,
-      a#legal {
+      a#legal,
+      a#contact {
         float: none;
         display: block;
       }

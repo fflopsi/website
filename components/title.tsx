@@ -2,11 +2,11 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { getAttr } from './routing';
+import { getAttr } from '@/lib/routing';
 
 export default function Title() {
   const title = getAttr(usePathname(), 'title');
-  const titles = title.match(/^Florian(\b.*)/);
+  const titles = title!.match(/^Florian(\b.*)/);
   return (
     <h1>
       {titles ? (

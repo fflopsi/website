@@ -80,11 +80,61 @@ a,
 .link-like {
   color: vars.$link;
   text-decoration: underline;
+  cursor: pointer;
   transition: color 0.2s;
   -webkit-transition: color 0.2s;
   &:hover {
     color: vars.$hover;
     text-decoration: none;
+  }
+}
+
+/* Form */
+form {
+  .form-grid {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 0.5rem;
+    @media screen and (max-width: 590px) {
+      display: block;
+    }
+  }
+  label {
+    color: gray;
+  }
+  input,
+  select,
+  textarea {
+    background-color: #272a31;
+    margin: 0.3rem 0;
+    padding: 2px 4px;
+    border-radius: 6px;
+    min-width: 24rem;
+    @media screen and (max-width: 590px) {
+      min-width: 100%;
+    }
+  }
+  select {
+    cursor: pointer;
+  }
+  textarea {
+    max-width: 100%;
+  }
+  button {
+    background-color: #272a31;
+    margin: 0.3rem 0;
+    padding: 2px 8px;
+    color: vars.$link;
+    border: 1px solid #666666 {
+      radius: 8px;
+    }
+    &:hover {
+      color: vars.$hover;
+      background-color: #333333;
+      cursor: pointer;
+    }
   }
 }
 
