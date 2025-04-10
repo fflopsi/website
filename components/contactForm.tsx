@@ -2,7 +2,8 @@
 
 import { submitContactForm } from '@/actions/submitContactForm';
 import Form from 'next/form';
-import { useActionState } from 'react';
+import Link from 'next/link';
+import { useActionState, useState } from 'react';
 
 export default function ContactForm() {
   const [state, action, isLoading] = useActionState(submitContactForm, {
@@ -10,9 +11,11 @@ export default function ContactForm() {
     successMsg: '',
     name: '',
     email: '',
-    subject: 'question',
+    subject: 'Question',
     message: '',
   });
+
+  const [subject, setSubject] = useState(state.subject);
 
   return (
     <Form action={action}>
@@ -35,17 +38,33 @@ export default function ContactForm() {
           name='email'
           placeholder='robin.miller@gmail.com'
           defaultValue={state.email}
-          minLength={6}
           maxLength={64}
         />
         <label htmlFor='subject'>Subject: </label>
-        <select id='subject' name='subject' defaultValue={state.subject}>
-          <option value='ta'>Concerning TA</option>
-          <option value='question'>Question</option>
-          <option value='suggestion'>Suggestion</option>
-          <option value='bug'>Bug</option>
-          <option value='other'>Other</option>
+        <select
+          id='subject'
+          name='subject'
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+        >
+          <option value='TA'>Concerning TA</option>
+          <option value='Question'>Question</option>
+          <option value='Suggestion'>Suggestion</option>
+          <option value='Bug'>Bug</option>
+          <option value='Other'>Other</option>
         </select>
+        {subject === 'Bug' && (
+          <i style={{ gridColumn: '1 / -1' }}>
+            If you know how,{' '}
+            <Link
+              target='_blank'
+              href={`https://${process.env.VERCEL_GIT_PROVIDER}.com/${process.env.VERCEL_GIT_REPO_OWNER}/${process.env.VERCEL_GIT_REPO_SLUG}/issues/new`}
+            >
+              create an issue on GitHub
+            </Link>{' '}
+            instead.
+          </i>
+        )}
       </div>
       <label htmlFor='message'>Your message *:</label>
       <br />
@@ -62,6 +81,15 @@ export default function ContactForm() {
       <label>
         <i>*: Required</i>
       </label>
+      <br />
+      <input
+        type='checkbox'
+        id='copy'
+        name='copy'
+        value='true'
+        style={{ minWidth: 0 }}
+      />
+      <label htmlFor='copy'> Receive a copy of your message by email</label>
       <br />
       <button disabled={isLoading} type='submit'>
         {isLoading ? 'Sending...' : 'Submit message'}
