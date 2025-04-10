@@ -16,6 +16,8 @@ export default function ContactForm() {
   });
 
   const [subject, setSubject] = useState(state.subject);
+  const [email, setEmail] = useState(state.email);
+  const [isEmailValid, setIsEmailValid] = useState(false);
 
   return (
     <Form action={action}>
@@ -37,8 +39,13 @@ export default function ContactForm() {
           id='email'
           name='email'
           placeholder='robin.miller@gmail.com'
+          value={email}
           defaultValue={state.email}
           maxLength={64}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            setIsEmailValid(e.target.validity.valid);
+          }}
         />
         <label htmlFor='subject'>Subject: </label>
         <select
@@ -87,6 +94,7 @@ export default function ContactForm() {
         id='copy'
         name='copy'
         value='true'
+        disabled={!isEmailValid || email === ''}
         style={{ minWidth: 0 }}
       />
       <label htmlFor='copy'> Receive a copy of your message by email</label>
