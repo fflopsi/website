@@ -1,12 +1,7 @@
-import getMetadata from '@/components/metadata';
+import { getRouteMetadata } from '@/components/routing';
 import Link from 'next/link';
 
-const title = 'Florian: Informatik TA';
-
-export const metadata = getMetadata(
-  title,
-  "Florian's TA material for Informatik",
-);
+export const metadata = getRouteMetadata('/ta/informatik/');
 
 export default function Informatik() {
   return (

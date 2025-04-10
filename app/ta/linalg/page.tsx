@@ -1,13 +1,8 @@
-import getMetadata from '@/components/metadata';
+import { getRouteMetadata } from '@/components/routing';
 import { list } from '@vercel/blob';
 import Link from 'next/link';
 
-const title = 'Florian: Lineare Algebra II TA';
-
-export const metadata = getMetadata(
-  title,
-  "Florian's TA material for Lineare Algebra II",
-);
+export const metadata = getRouteMetadata('/ta/linalg/');
 
 export default async function LinAlg() {
   const handouts = await list({ prefix: 'ta/linalg/' });

@@ -1,9 +1,7 @@
-import getMetadata from '@/components/metadata';
+import { getRouteMetadata } from '@/components/routing';
 import Link from 'next/link';
 
-const title = 'Florian: Legal information';
-
-export const metadata = getMetadata(title);
+export const metadata = getRouteMetadata('/legal/');
 
 export default function Impressum() {
   return (

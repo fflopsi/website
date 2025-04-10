@@ -1,9 +1,7 @@
-import getMetadata from '@/components/metadata';
+import { getRouteMetadata } from '@/components/routing';
 import React from 'react';
 
-const title = 'Florian: Coding';
-
-export const metadata = getMetadata(title, "Florian's hobby coding journey");
+export const metadata = getRouteMetadata('/coding/');
 
 export default function CodingLayout({
   children,

@@ -1,8 +1,7 @@
 import ContactForm from '@/components/contactForm';
-import getMetadata from '@/components/metadata';
-import { getAttr } from '@/components/routing';
+import { getRouteMetadata } from '@/components/routing';
 
-export const metadata = getMetadata(getAttr('/contact/', 'title'));
+export const metadata = getRouteMetadata('/contact/');
 
 export default function Contact() {
   return (

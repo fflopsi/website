@@ -1,12 +1,7 @@
-import getMetadata from '@/components/metadata';
+import { getRouteMetadata } from '@/components/routing';
 import Link from 'next/link';
 
-const title = 'Florian: Astronomy';
-
-export const metadata = getMetadata(
-  title,
-  "Florian's hobby astronomer journey",
-);
+export const metadata = getRouteMetadata('/astro/');
 
 export default function Astro() {
   return (
