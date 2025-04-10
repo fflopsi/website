@@ -1,4 +1,4 @@
-import { getRouteMetadata } from '@/components/routing';
+import { getRouteMetadata } from '@/lib/routing';
 import { list } from '@vercel/blob';
 import Link from 'next/link';
 

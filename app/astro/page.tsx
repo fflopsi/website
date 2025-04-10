@@ -1,4 +1,4 @@
-import { getRouteMetadata } from '@/components/routing';
+import { getRouteMetadata } from '@/lib/routing';
 import Link from 'next/link';
 
 export const metadata = getRouteMetadata('/astro/');

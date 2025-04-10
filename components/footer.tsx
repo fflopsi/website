@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { getAttr } from './routing';
+import { getAttr } from '@/lib/routing';
 
 export default function Footer() {
   return (

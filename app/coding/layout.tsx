@@ -1,4 +1,4 @@
-import { getRouteMetadata } from '@/components/routing';
+import { getRouteMetadata } from '@/lib/routing';
 import React from 'react';
 
 export const metadata = getRouteMetadata('/coding/');

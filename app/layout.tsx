@@ -1,10 +1,10 @@
-import '@/components/css/globals.scss';
-import '@/components/css/navBar.scss';
 import DevWarning from '@/components/devWarning';
 import Footer from '@/components/footer';
 import NavBar from '@/components/navBar';
-import { getRouteMetadata } from '@/components/routing';
 import Title from '@/components/title';
+import { getRouteMetadata } from '@/lib/routing';
+import '@/style/globals.scss';
+import '@/style/navBar.scss';
 import { Source_Code_Pro } from 'next/font/google';
 
 const sourceCodePro = Source_Code_Pro({ subsets: ['latin'] });

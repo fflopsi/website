@@ -1,5 +1,5 @@
 import ContactForm from '@/components/contactForm';
-import { getRouteMetadata } from '@/components/routing';
+import { getRouteMetadata } from '@/lib/routing';
 
 export const metadata = getRouteMetadata('/contact/');
 
