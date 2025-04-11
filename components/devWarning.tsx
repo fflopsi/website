@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RepoLink from './repoLink';
 
 export default function DevWarning() {
   return process.env.VERCEL_ENV !== 'production' ? (
@@ -19,12 +20,9 @@ export default function DevWarning() {
       </p>
       <p>
         The present version of this website is based on commit{' '}
-        <Link
-          target='_blank'
-          href={`https://${process.env.VERCEL_GIT_PROVIDER}.com/${process.env.VERCEL_GIT_REPO_OWNER}/${process.env.VERCEL_GIT_REPO_SLUG}/commit/${process.env.VERCEL_GIT_COMMIT_SHA}`}
-        >
+        <RepoLink path={`/commit/${process.env.VERCEL_GIT_COMMIT_SHA}`}>
           {process.env.VERCEL_GIT_COMMIT_SHA}
-        </Link>
+        </RepoLink>
         .
       </p>
       <hr />
