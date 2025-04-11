@@ -5,6 +5,7 @@ import Title from '@/components/title';
 import { getRouteMetadata } from '@/lib/routing';
 import '@/style/globals.scss';
 import '@/style/navBar.scss';
+import { Analytics } from '@vercel/analytics/next';
 import { Source_Code_Pro } from 'next/font/google';
 
 const sourceCodePro = Source_Code_Pro({ subsets: ['latin'] });
@@ -26,6 +27,7 @@ export default function RootLayout({
         <NavBar />
         <div id='content'>{children}</div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
