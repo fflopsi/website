@@ -2,8 +2,8 @@
 
 import { submitContactForm } from '@/actions/submitContactForm';
 import Form from 'next/form';
-import Link from 'next/link';
 import { useActionState, useState } from 'react';
+import RepoLink from './repoLink';
 
 export default function ContactForm() {
   const [state, action, isLoading] = useActionState(submitContactForm, {
@@ -66,12 +66,7 @@ export default function ContactForm() {
         {subject === 'Bug' && (
           <i style={{ gridColumn: '1 / -1' }}>
             If you know how,{' '}
-            <Link
-              target='_blank'
-              href={`https://${process.env.VERCEL_GIT_PROVIDER}.com/${process.env.VERCEL_GIT_REPO_OWNER}/${process.env.VERCEL_GIT_REPO_SLUG}/issues/new`}
-            >
-              create an issue on GitHub
-            </Link>{' '}
+            <RepoLink path='/issues/new'>create an issue on GitHub</RepoLink>{' '}
             instead.
           </i>
         )}

@@ -1,3 +1,4 @@
+import RepoLink from '@/components/repoLink';
 import { getRouteMetadata } from '@/lib/routing';
 import Link from 'next/link';
 
@@ -89,13 +90,7 @@ export default function Home() {
       </p>
       <p>
         The source code for this website is available{' '}
-        <Link
-          target='_blank'
-          href={`https://${process.env.VERCEL_GIT_PROVIDER}.com/${process.env.VERCEL_GIT_REPO_OWNER}/${process.env.VERCEL_GIT_REPO_SLUG}`}
-        >
-          on GitHub
-        </Link>
-        .
+        <RepoLink path=''>on GitHub</RepoLink>.
       </p>
       <p>
         The development version of this website can be accessed{' '}
