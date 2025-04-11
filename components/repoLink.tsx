@@ -9,10 +9,7 @@ export default function RepoLink({
   children: React.ReactNode;
 }) {
   return (
-    <Link
-      target='_blank'
-      href={`https://${process.env.VERCEL_GIT_PROVIDER}.com/${process.env.VERCEL_GIT_REPO_OWNER}/${process.env.VERCEL_GIT_REPO_SLUG}${path}`}
-    >
+    <Link target='_blank' href={`https://github.com/fflopsi/website${path}`}>
       {children}
     </Link>
   );
