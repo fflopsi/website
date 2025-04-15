@@ -1,10 +1,16 @@
-import LinalgHandouts from '@/components/linalgHandouts';
 import { getRouteMetadata } from '@/lib/routing';
+import { list } from '@vercel/blob';
+import { unstable_cache } from 'next/cache';
 import Link from 'next/link';
 
 export const metadata = getRouteMetadata('/ta/linalg/');
 
-export default function LinAlg() {
+export default async function LinAlg() {
+  const handouts = await unstable_cache(
+    async () => await list({ prefix: 'ta/linalg/' }),
+    [],
+    { revalidate: 60 },
+  )();
   return (
     <>
       <h2>Updates</h2>
@@ -14,8 +20,11 @@ export default function LinAlg() {
           <ul>
             <li>
               The next exercise session will only take place on 5.5.2025, as
-              there is the Zürich holiday <Link target='_blank' href='https://www.sechselaeuten.ch/'>Sechseläuten</Link> on 28.4.2025.{' '}
-              <em>Happy Easter, and enjoy your break!</em>
+              there is the Zürich holiday{' '}
+              <Link target='_blank' href='https://www.sechselaeuten.ch/'>
+                Sechseläuten
+              </Link>{' '}
+              on 28.4.2025. <em>Happy Easter, and enjoy your break!</em>
             </li>
           </ul>
         </li>
@@ -43,7 +52,17 @@ export default function LinAlg() {
       </ul>
 
       <h2 id='material'>Exercise material</h2>
-      <LinalgHandouts />
+      <ul>
+        {handouts.blobs.map((blob) => {
+          const match = blob.pathname.match(/ta\/linalg\/handout-(\d{2})\.pdf/);
+          if (match)
+            return (
+              <li key={blob.pathname}>
+                [ES{match[1]}] <Link href={blob.url}>Handout</Link>
+              </li>
+            );
+        })}
+      </ul>
 
       {/* <h2>Other stuff</h2>
       <ul>
