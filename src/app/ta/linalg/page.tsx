@@ -1,15 +1,33 @@
 import { getRouteMetadata } from '@/lib/routing';
 import { list } from '@vercel/blob';
+import { unstable_cache } from 'next/cache';
 import Link from 'next/link';
 
 export const metadata = getRouteMetadata('/ta/linalg/');
 
 export default async function LinAlg() {
-  const handouts = await list({ prefix: 'ta/linalg/' });
+  const handouts = await unstable_cache(
+    async () => await list({ prefix: 'ta/linalg/' }),
+    [],
+    { tags: ['blobs'], revalidate: 60 },
+  )();
   return (
     <>
       <h2>Updates</h2>
       <ul>
+        <li>
+          <em>[15.04.2025]</em>
+          <ul>
+            <li>
+              The next exercise session will only take place on 5.5.2025, as
+              there is the Zürich holiday{' '}
+              <Link target='_blank' href='https://www.sechselaeuten.ch/'>
+                Sechseläuten
+              </Link>{' '}
+              on 28.4.2025. <em>Happy Easter, and enjoy your break!</em>
+            </li>
+          </ul>
+        </li>
         <li>
           <em>[25.02.2025]</em>
           <ul>
