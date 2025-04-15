@@ -10,6 +10,16 @@ export default function LinAlg() {
       <h2>Updates</h2>
       <ul>
         <li>
+          <em>[15.04.2025]</em>
+          <ul>
+            <li>
+              The next exercise session will only take place on 5.5.2025, as
+              there is the Zürich holiday <Link target='_blank' href='https://www.sechselaeuten.ch/'>Sechseläuten</Link> on 28.4.2025.{' '}
+              <em>Happy Easter, and enjoy your break!</em>
+            </li>
+          </ul>
+        </li>
+        <li>
           <em>[25.02.2025]</em>
           <ul>
             <li>
