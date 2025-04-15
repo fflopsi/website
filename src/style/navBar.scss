@@ -23,7 +23,7 @@ nav {
     border-radius 0.2s;
   &.sticky {
     margin-left: calc(-1 * vars.$border-lr);
-    width: 100vw;
+    width: calc(100% + 2 * vars.$border-lr);
     border: none {
       bottom: $border;
       radius: 0;
