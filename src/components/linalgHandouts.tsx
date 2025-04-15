@@ -4,15 +4,9 @@ import Link from 'next/link';
 
 export default async function LinalgHandouts() {
   const handouts = await unstable_cache(
-    async () => {
-      return await list({ prefix: 'ta/linalg/' });
-      // return blobs;
-    },
-    ['blobs'],
-    {
-      tags: ['blobs'],
-      revalidate: 60,
-    },
+    async () => await list({ prefix: 'ta/linalg/' }),
+    [],
+    { revalidate: 60 },
   )();
   return (
     <ul>
