@@ -9,7 +9,7 @@ export default async function LinAlg() {
   const handouts = await unstable_cache(
     async () => await list({ prefix: 'ta/linalg/' }),
     [],
-    { revalidate: 60 },
+    { tags: ['blobs'], revalidate: 60 },
   )();
   return (
     <>
