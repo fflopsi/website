@@ -47,7 +47,7 @@ const navigation: Navigation = {
         title: 'Florian: Lineare Algebra II TA',
         navTitle: 'Lineare Algebra II',
         description: "Florian's TA material for Lineare Algebra II",
-        updated: '2025-04-08',
+        updated: '2025-04-15',
       },
     },
   },
