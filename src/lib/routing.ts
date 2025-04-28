@@ -29,7 +29,7 @@ const navigation: Navigation = {
     title: 'Florian Frauenfelder',
     navTitle: 'Home',
     description: "Florian Frauenfelder's personal website",
-    updated: '2025-03-11',
+    updated: '2025-04-28',
   },
   '/ta/': {
     title: 'Florian: Teaching Assistant',
