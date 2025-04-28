@@ -1,8 +1,28 @@
 import RepoLink from '@/components/repoLink';
 import { getRouteMetadata } from '@/lib/routing';
 import Link from 'next/link';
+import { FaGithub, FaReddit, FaLinkedin } from 'react-icons/fa';
 
 export const metadata = getRouteMetadata('/');
+
+const size = 32;
+const social = [
+  {
+    href: 'https://github.com/fflopsi',
+    icon: <FaGithub size={size} />,
+    key: 'github',
+  },
+  {
+    href: 'https://linkedin.com/in/florian-frauenfelder/',
+    icon: <FaLinkedin size={size} />,
+    key: 'linkedin',
+  },
+  {
+    href: 'https://reddit.com/u/flopsi_',
+    icon: <FaReddit size={size} />,
+    key: 'reddit',
+  },
+];
 
 export default function Home() {
   return (
@@ -104,6 +124,13 @@ export default function Home() {
           <Link href='mailto:ffrauenfelde@student.ethz.ch'>
             ffrauenfelde@student.ethz.ch
           </Link>
+        </li>
+        <li className='flex gap-4'>
+          {social.map(({ href, icon, key }) => (
+            <Link target='_blank' href={href} key={key}>
+              {icon}
+            </Link>
+          ))}
         </li>
       </ul>
     </>
