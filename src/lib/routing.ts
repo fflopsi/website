@@ -35,7 +35,7 @@ const navigation: Navigation = {
     title: 'Florian: Teaching Assistant',
     navTitle: 'Teaching Assistant',
     description: "Florian's TA jobs at ETHZ",
-    updated: '2024-12-19',
+    updated: '2025-06-04',
     sub: {
       '/ta/informatik/': {
         title: 'Florian: Informatik TA',
@@ -47,7 +47,7 @@ const navigation: Navigation = {
         title: 'Florian: Lineare Algebra II TA',
         navTitle: 'Lineare Algebra II',
         description: "Florian's TA material for Lineare Algebra II",
-        updated: '2025-04-15',
+        updated: '2025-06-04',
       },
     },
   },
