@@ -9,6 +9,23 @@ export default async function LinAlg() {
       <h2>Updates</h2>
       <ul>
         <li>
+          <em>[04.06.2025]</em>
+          <ul>
+            <li>
+              Uploaded my <Link href='#other'>summary</Link> for Lineare Algebra
+              I/II.
+            </li>
+            <li>
+              Uploaded <Link href='#quiz'>quiz slides</Link> from the last
+              exercise session, thanks for participating!
+            </li>
+            <li>
+              This was the last big update on here; thanks for coming to my
+              exercise class, enjoy your break, and good luck with your exams!
+            </li>
+          </ul>
+        </li>
+        <li>
           <em>[15.04.2025]</em>
           <ul>
             <li>
@@ -56,13 +73,25 @@ export default async function LinAlg() {
         ))}
       </ul>
 
-      {/* <h2>Other stuff</h2>
+      <h2 id='quiz'>Quiz from last exercise session</h2>
       <ul>
         <li>
-          [My cheatsheet] <Link href='CheatSheet.pdf'>PDF</Link> |{' '}
-          <Link href='CheatSheet.tex'>LaTeX source</Link>
+          <Link
+            target='_blank'
+            href='https://www.mentimeter.com/app/presentation/almmc5tcjmdqp77pwer6pyivt14gvwsf'
+          >
+            Mentimeter quiz slides
+          </Link>
         </li>
-      </ul> */}
+      </ul>
+
+      <h2 id='other'>Other stuff</h2>
+      <ul>
+        <li>
+          [My summary] <Link href='summary.pdf'>PDF</Link> |{' '}
+          <Link href='summary.md'>Markdown source</Link>
+        </li>
+      </ul>
 
       <h2 id='links'>Useful links</h2>
       <ul>
@@ -86,7 +115,7 @@ export default async function LinAlg() {
         </li>
       </ul>
 
-      <h2 id='session'>Exercise session</h2>
+      {/* <h2 id='session'>Exercise session</h2>
       <ul>
         <li>Monday</li>
         <li>14:15 - 16:00</li>
@@ -98,7 +127,7 @@ export default async function LinAlg() {
             CHN D 46
           </Link>
         </li>
-      </ul>
+      </ul> */}
     </>
   );
 }
