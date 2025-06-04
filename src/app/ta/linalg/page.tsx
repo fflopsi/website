@@ -1,16 +1,9 @@
 import { getRouteMetadata } from '@/lib/routing';
-import { list } from '@vercel/blob';
-import { unstable_cache } from 'next/cache';
 import Link from 'next/link';
 
 export const metadata = getRouteMetadata('/ta/linalg/');
 
 export default async function LinAlg() {
-  const handouts = await unstable_cache(
-    async () => await list({ prefix: 'ta/linalg/' }),
-    [],
-    { tags: ['blobs'], revalidate: 60 },
-  )();
   return (
     <>
       <h2>Updates</h2>
@@ -53,15 +46,14 @@ export default async function LinAlg() {
 
       <h2 id='material'>Exercise material</h2>
       <ul>
-        {handouts.blobs.map((blob) => {
-          const match = blob.pathname.match(/ta\/linalg\/handout-(\d{2})\.pdf/);
-          if (match)
-            return (
-              <li key={blob.pathname}>
-                [ES{match[1]}] <Link href={blob.url}>Handout</Link>
-              </li>
-            );
-        })}
+        {Array.from(Array(13).keys()).map((i) => (
+          <li key={i}>
+            [ES{String(i + 1).padStart(2, '0')}]{' '}
+            <Link href={`handout-${String(i + 1).padStart(2, '0')}.pdf`}>
+              Handout
+            </Link>
+          </li>
+        ))}
       </ul>
 
       {/* <h2>Other stuff</h2>
