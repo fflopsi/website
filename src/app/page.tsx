@@ -1,7 +1,7 @@
 import RepoLink from '@/components/repoLink';
 import { getRouteMetadata } from '@/lib/routing';
 import Link from 'next/link';
-import { FaGithub, FaReddit, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaReddit } from 'react-icons/fa';
 
 export const metadata = getRouteMetadata('/');
 
@@ -67,10 +67,14 @@ export default function Home() {
           I work as a <abbr title='Teaching Assistant'>TA</abbr> at ETH, so far{' '}
           <Link href='/ta/informatik/'>
             for <q>Informatik</q> (for D-MATH, D-PHYS)
-          </Link>{' '}
-          and{' '}
+          </Link>
+          ,{' '}
           <Link href='/ta/linalg/'>
             <q>Lineare Algebra II</q> (for D-MATH, D-PHYS)
+          </Link>{' '}
+          and{' '}
+          <Link href='/ta/complex-analysis/'>
+            <q>Complex Analysis</q> (for D-MATH, D-PHYS)
           </Link>
           . You can find all the material <Link href='/ta/'>here</Link>.
         </li>

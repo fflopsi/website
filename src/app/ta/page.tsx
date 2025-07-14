@@ -9,6 +9,18 @@ export default function TA() {
       <h2>Teaching Assistant positions</h2>
       <ul>
         <li>
+          <em>[2/2025]</em> In autumn 2025, I am a teaching assistant for
+          Complex Analysis for BSc D-MATH, D-PHYS, course{' '}
+          <Link
+            target='_blank'
+            href='https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2025W&lerneinheitId=193482'
+          >
+            401-2303-00L
+          </Link>
+          . All the material is available{' '}
+          <Link href='complex-analysis/'>here</Link>.
+        </li>
+        <li>
           <em>[1/2025]</em> In spring 2025, I was a teaching assistant for
           Lineare Algebra II for BSc D-MATH, D-PHYS, course{' '}
           <Link

@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
       destination: '/legal/',
       permanent: true,
     },
+    {
+      source: '/ta/linear(e|)-algebra/',
+      destination: '/ta/linalg/',
+      permanent: true,
+    },
+    {
+      source: '/ta/funktionentheorie/',
+      destination: '/ta/complex-analysis/',
+      permanent: true,
+    },
   ],
 };
 
