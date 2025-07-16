@@ -15,8 +15,33 @@ export async function submitContactForm(
   previousState: FormState,
   formData: FormData,
 ): Promise<FormState> {
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  const siteKey = '6LdtGYUrAAAAALmAOd-PSkICuKw65bMJNh1FS_Ox';
+  const siteKeyHidden = '6LcGOYUrAAAAAPIVkoLzsJPbWlzt_QZoAQ0sWPzE';
+  const recaptchaResponse = await fetch(
+    `https://recaptchaenterprise.googleapis.com/v1/projects/website-466113/assessments?key=${process.env.GOOGLE_API_KEY}`,
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        event: {
+          token: formData.get('g-recaptcha-response')?.toString() ?? '',
+          siteKey: siteKeyHidden,
+          expectedAction: 'contact_form',
+        },
+      }),
+    },
+  );
+  const recaptchaData = await recaptchaResponse.json();
+
   try {
+    if (
+      !recaptchaData?.riskAnalysis?.score ||
+      recaptchaData?.tokenProperties?.valid !== true
+    ) {
+      console.log('Recaptcha failed', JSON.stringify(recaptchaData, null, 2));
+      throw new Error('Recaptcha failed');
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const { data, error } = await resend.emails.send({
       from: `${formData.get('name')?.toString() ?? 'Some user of the website'} <form@contact.florian-frauenfelder.ch>`,
       to: 'ffrauenfelde@student.ethz.ch',
@@ -68,7 +93,7 @@ export async function submitContactForm(
     console.log(e);
     return {
       success: false,
-      successMsg: 'Something went wrong.',
+      successMsg: `Something went wrong: ${e}`,
       name: formData.get('name')?.toString() ?? '',
       email: formData.get('email')?.toString() ?? '',
       subject: formData.get('subject')?.toString() ?? 'Question',

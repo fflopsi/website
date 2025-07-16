@@ -4,6 +4,7 @@ import { submitContactForm } from '@/actions/submitContactForm';
 import Form from 'next/form';
 import { useActionState, useState } from 'react';
 import RepoLink from './repoLink';
+import { RecaptchaHidden } from './captcha';
 
 export default function ContactForm() {
   const [state, action, isLoading] = useActionState(submitContactForm, {
@@ -99,6 +100,7 @@ export default function ContactForm() {
       />
       <label htmlFor='copy'> Receive a copy of your message by email</label>
       <br />
+      <RecaptchaHidden action='contact_form' />
       <button disabled={isLoading} type='submit'>
         {isLoading ? 'Sending...' : 'Submit message'}
       </button>{' '}
