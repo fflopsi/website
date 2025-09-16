@@ -65,20 +65,20 @@ export default function Home() {
               ETHZ
             </abbr>
           </Link>
-          , currently in the 4<sup>th</sup> semester BSc.
+          , currently in the 5<sup>th</sup> semester BSc.
         </li>
         <li>
           I work as a <abbr title='Teaching Assistant'>TA</abbr> at ETH, so far{' '}
           <Link href='/ta/computer-science/'>
-            for <q>Informatik</q> (for D-MATH, D-PHYS)
+            for <q>Informatik</q>
           </Link>
           ,{' '}
           <Link href='/ta/linear-algebra-ii/'>
-            <q>Lineare Algebra II</q> (for D-MATH, D-PHYS)
+            <q>Lineare Algebra II</q>
           </Link>{' '}
           and{' '}
           <Link href='/ta/complex-analysis/'>
-            <q>Funktionentheorie</q> (for D-MATH, D-PHYS)
+            <q>Funktionentheorie</q>
           </Link>
           . You can find all the material <Link href='/ta/'>here</Link>.
         </li>
