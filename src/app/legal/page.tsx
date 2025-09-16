@@ -1,7 +1,10 @@
-import { getRouteMetadata } from '@/lib/routing';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = getRouteMetadata('/legal/');
+export const metadata: Metadata = {
+  title: 'Florian: Legal information',
+  authors: [{ name: 'Florian Frauenfelder' }],
+};
 
 export default function Impressum() {
   return (

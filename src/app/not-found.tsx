@@ -1,7 +1,10 @@
-import { getRouteMetadata } from '@/lib/routing';
+import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = getRouteMetadata('/404/');
+export const metadata: Metadata = {
+  title: "404: This didn't work.",
+  authors: [{ name: 'Florian Frauenfelder' }],
+};
 
 export default function Custom404() {
   return (

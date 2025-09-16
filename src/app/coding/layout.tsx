@@ -1,7 +1,11 @@
-import { getRouteMetadata } from '@/lib/routing';
+import type { Metadata } from 'next';
 import React from 'react';
 
-export const metadata = getRouteMetadata('/coding/');
+export const metadata: Metadata = {
+  title: 'Florian: Coding',
+  description: "Florian's hobby coding journey",
+  authors: [{ name: 'Florian Frauenfelder' }],
+};
 
 export default function CodingLayout({
   children,

@@ -1,9 +1,13 @@
 import RepoLink from '@/components/repoLink';
-import { getRouteMetadata } from '@/lib/routing';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaReddit } from 'react-icons/fa';
 
-export const metadata = getRouteMetadata('/');
+export const metadata: Metadata = {
+  title: 'Florian Frauenfelder',
+  description: "Florian Frauenfelder's personal website",
+  authors: [{ name: 'Florian Frauenfelder' }],
+};
 
 const size = 32;
 const social = [

@@ -1,7 +1,11 @@
-import { getRouteMetadata } from '@/lib/routing';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = getRouteMetadata('/ta/linalg/');
+export const metadata: Metadata = {
+  title: 'Florian: Lineare Algebra II TA',
+  description: "Florian's TA material for Lineare Algebra II",
+  authors: [{ name: 'Florian Frauenfelder' }],
+};
 
 export default async function LinAlg() {
   return (

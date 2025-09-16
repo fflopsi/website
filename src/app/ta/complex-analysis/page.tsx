@@ -1,7 +1,11 @@
-import { getRouteMetadata } from '@/lib/routing';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = getRouteMetadata('/ta/complex-analysis/');
+export const metadata: Metadata = {
+  title: 'Florian: Complex Analysis TA',
+  description: "Florian's TA material for Complex Analysis",
+  authors: [{ name: 'Florian Frauenfelder' }],
+};
 
 export default async function LinAlg() {
   return (

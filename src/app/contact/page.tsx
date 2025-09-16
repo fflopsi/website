@@ -1,7 +1,10 @@
 import ContactForm from '@/components/contactForm';
-import { getRouteMetadata } from '@/lib/routing';
+import type { Metadata } from 'next';
 
-export const metadata = getRouteMetadata('/contact/');
+export const metadata: Metadata = {
+  title: 'Florian: Contact form',
+  authors: [{ name: 'Florian Frauenfelder' }],
+};
 
 export default function Contact() {
   return (

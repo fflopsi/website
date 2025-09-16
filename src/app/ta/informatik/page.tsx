@@ -1,7 +1,11 @@
-import { getRouteMetadata } from '@/lib/routing';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = getRouteMetadata('/ta/informatik/');
+export const metadata: Metadata = {
+  title: 'Florian: Informatik TA',
+  description: "Florian's TA material for Informatik",
+  authors: [{ name: 'Florian Frauenfelder' }],
+};
 
 export default function Informatik() {
   return (

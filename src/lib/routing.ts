@@ -1,10 +1,7 @@
-import { Metadata } from 'next';
-
 type Navigation = {
   [path: string]: {
     title: string;
     navTitle: string;
-    description?: string;
     sub?: Navigation;
   };
 };
@@ -28,39 +25,32 @@ const navigation: Navigation = {
   '/': {
     title: 'Florian Frauenfelder',
     navTitle: 'Home',
-    description: "Florian Frauenfelder's personal website",
   },
   '/ta/': {
     title: 'Florian: Teaching Assistant',
     navTitle: 'Teaching Assistant',
-    description: "Florian's TA jobs at ETHZ",
     sub: {
       '/ta/informatik/': {
         title: 'Florian: Informatik TA',
         navTitle: 'Informatik',
-        description: "Florian's TA material for Informatik",
       },
       '/ta/linalg/': {
         title: 'Florian: Lineare Algebra II TA',
         navTitle: 'Lineare Algebra II',
-        description: "Florian's TA material for Lineare Algebra II",
       },
       '/ta/complex-analysis/': {
         title: 'Florian: Complex Analysis TA',
         navTitle: 'Complex Analysis',
-        description: "Florian's TA material for Complex Analysis",
       },
     },
   },
   '/astro/': {
     title: 'Florian: Astronomy',
     navTitle: 'Hobby Astronomer',
-    description: "Florian's hobby astronomer journey",
   },
   '/coding/': {
     title: 'Florian: Coding',
     navTitle: 'Hobby Coder',
-    description: "Florian's hobby coding journey",
   },
   '/contact/': {
     title: 'Florian: Contact form',
@@ -88,7 +78,7 @@ function isValidPath(path: string, nav: Navigation = navigation): boolean {
 
 export function getAttr(
   path: string,
-  attr: 'title' | 'navTitle' | 'description',
+  attr: 'title' | 'navTitle',
 ): string | undefined {
   if (!isValidPath(path)) {
     switch (attr) {
@@ -104,8 +94,6 @@ export function getAttr(
         return navigation[path].title;
       case 'navTitle':
         return navigation[path].navTitle;
-      case 'description':
-        return navigation[path].description;
     }
   }
   if (pathArr.length === 4) {
@@ -114,17 +102,7 @@ export function getAttr(
         return navigation[`/${pathArr[1]}/`].sub![path].title;
       case 'navTitle':
         return navigation[`/${pathArr[1]}/`].sub![path].navTitle;
-      case 'description':
-        return navigation[`/${pathArr[1]}/`].sub![path].description;
     }
   }
   return '';
-}
-
-export function getRouteMetadata(path: Path): Metadata {
-  return {
-    title: getAttr(path, 'title'),
-    description: getAttr(path, 'description'),
-    authors: [{ name: 'Florian Frauenfelder' }],
-  };
 }
