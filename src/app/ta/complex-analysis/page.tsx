@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Florian: Complex Analysis TA',
-  description: "Florian's TA material for Complex Analysis",
+  title: 'Florian: Funktionentheorie TA',
+  description: "Florian's TA material for Funktionentheorie",
   authors: [{ name: 'Florian Frauenfelder' }],
 };
 
@@ -15,7 +15,7 @@ export default async function ComplexAnalysis() {
         <li>
           <em>[14.07.2025] Welcome!</em>
           <ul>
-            <li>I was officially accepted as a Complex Analysis TA!</li>
+            <li>I was officially accepted as a Funktionentheorie TA!</li>
           </ul>
         </li>
       </ul>
