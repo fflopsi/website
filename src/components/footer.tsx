@@ -1,8 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { getAttr } from '@/lib/routing';
 
 export default function Footer() {
   return (
@@ -11,8 +9,7 @@ export default function Footer() {
       <hr />
       <div style={{ marginTop: '4rem' }} />
       <footer>
-        &copy; 2025 Florian Frauenfelder // Updated:{' '}
-        {getAttr(usePathname(), 'updated')} // <Link href='/'>Home</Link> //{' '}
+        &copy; 2025 Florian Frauenfelder // <Link href='/'>Home</Link> //{' '}
         <Link href='/contact/'>Contact form</Link> //{' '}
         <Link href='/legal/'>
           Legal: Contact, Copyright, Disclaimer, Privacy policy
