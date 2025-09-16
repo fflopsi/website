@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Florian Frauenfelder' }],
 };
 
-export default async function LinAlg() {
+export default async function ComplexAnalysis() {
   return (
     <>
       <h2>Updates</h2>

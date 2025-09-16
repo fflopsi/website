@@ -14,7 +14,7 @@ export default function TA() {
       <ul>
         <li>
           <em>[2/2025]</em> In autumn 2025, I am a teaching assistant for
-          Complex Analysis for BSc D-MATH, D-PHYS, course{' '}
+          Funktionentheorie for BSc D-MATH, D-PHYS, course{' '}
           <Link
             target='_blank'
             href='https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2025W&lerneinheitId=193482'
@@ -33,7 +33,7 @@ export default function TA() {
           >
             401-1152-02L
           </Link>
-          . All the material is available <Link href='linalg/'>here</Link>.
+          . All the material is available <Link href='linear-algebra-ii/'>here</Link>.
         </li>
         <li>
           <em>[2/2024]</em> In autumn 2024, I was a teaching assistant for
@@ -44,7 +44,7 @@ export default function TA() {
           >
             252-0847-00L
           </Link>
-          . All the material is available <Link href='informatik/'>here</Link>.
+          . All the material is available <Link href='computer-science/'>here</Link>.
         </li>
       </ul>
     </>

@@ -9,8 +9,8 @@ type Navigation = {
 const paths = [
   '/',
   '/ta/',
-  '/ta/informatik/',
-  '/ta/linalg/',
+  '/ta/computer-science/',
+  '/ta/linear-algebra-ii/',
   '/ta/complex-analysis/',
   '/astro/',
   '/coding/',
@@ -30,17 +30,17 @@ const navigation: Navigation = {
     title: 'Florian: Teaching Assistant',
     navTitle: 'Teaching Assistant',
     sub: {
-      '/ta/informatik/': {
+      '/ta/computer-science/': {
         title: 'Florian: Informatik TA',
         navTitle: 'Informatik',
       },
-      '/ta/linalg/': {
+      '/ta/linear-algebra-ii/': {
         title: 'Florian: Lineare Algebra II TA',
         navTitle: 'Lineare Algebra II',
       },
       '/ta/complex-analysis/': {
-        title: 'Florian: Complex Analysis TA',
-        navTitle: 'Complex Analysis',
+        title: 'Florian: Funktionentheorie TA',
+        navTitle: 'Funktionentheorie',
       },
     },
   },

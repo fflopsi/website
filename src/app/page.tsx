@@ -69,16 +69,16 @@ export default function Home() {
         </li>
         <li>
           I work as a <abbr title='Teaching Assistant'>TA</abbr> at ETH, so far{' '}
-          <Link href='/ta/informatik/'>
+          <Link href='/ta/computer-science/'>
             for <q>Informatik</q> (for D-MATH, D-PHYS)
           </Link>
           ,{' '}
-          <Link href='/ta/linalg/'>
+          <Link href='/ta/linear-algebra-ii/'>
             <q>Lineare Algebra II</q> (for D-MATH, D-PHYS)
           </Link>{' '}
           and{' '}
           <Link href='/ta/complex-analysis/'>
-            <q>Complex Analysis</q> (for D-MATH, D-PHYS)
+            <q>Funktionentheorie</q> (for D-MATH, D-PHYS)
           </Link>
           . You can find all the material <Link href='/ta/'>here</Link>.
         </li>
