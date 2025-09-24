@@ -20,9 +20,9 @@ export default async function ComplexAnalysis() {
         </li>
       </ul>
 
-      {/* <h2 id='material'>Exercise material</h2>
+      <h2 id='material'>Exercise material</h2>
       <ul>
-        {Array.from(Array(13).keys()).map((i) => (
+        {Array.from(Array(1).keys()).map((i) => (
           <li key={i}>
             [ES{String(i + 1).padStart(2, '0')}]{' '}
             <Link href={`handout-${String(i + 1).padStart(2, '0')}.pdf`}>
@@ -30,7 +30,7 @@ export default async function ComplexAnalysis() {
             </Link>
           </li>
         ))}
-      </ul> */}
+      </ul>
 
       {/* <h2 id='other'>Other stuff</h2>
       <ul>
