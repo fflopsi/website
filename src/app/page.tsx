@@ -48,16 +48,7 @@ export default function Home() {
           </Link>{' '}
           in northern Switzerland near Zürich.
         </li>
-        <li>
-          I have a motorcycle, a white{' '}
-          <Link
-            target='_blank'
-            href='https://en.wikipedia.org/wiki/KTM_390_series'
-          >
-            KTM 390
-          </Link>{' '}
-          Duke 2022, to be exact.
-        </li>
+        <li>I have a motorcycle, a red 2025 BMW F 900 XR, to be exact.</li>
         <li>
           I study physics at{' '}
           <Link target='_blank' href='https://ethz.ch'>
