@@ -1,5 +1,7 @@
+import fs from 'fs';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import path from 'path';
 
 export const metadata: Metadata = {
   title: 'Florian: Funktionentheorie TA',
@@ -8,6 +10,11 @@ export const metadata: Metadata = {
 };
 
 export default async function ComplexAnalysis() {
+  const pdfs = fs
+    .readdirSync(path.join(process.cwd(), 'public', 'ta', 'complex-analysis'))
+    .filter((f) => /^handout-\d{2}\.pdf$/.test(f))
+    .sort();
+
   return (
     <>
       <h2>Updates</h2>
@@ -22,12 +29,10 @@ export default async function ComplexAnalysis() {
 
       <h2 id='material'>Exercise material</h2>
       <ul>
-        {Array.from(Array(1).keys()).map((i) => (
-          <li key={i}>
-            [ES{String(i + 1).padStart(2, '0')}]{' '}
-            <Link href={`handout-${String(i + 1).padStart(2, '0')}.pdf`}>
-              Handout
-            </Link>
+        {pdfs.map((file, i) => (
+          <li key={file}>
+            [{`ES${String(i + 1).padStart(2, '0')}`}]{' '}
+            <Link href={`${file}`}>Handout</Link>
           </li>
         ))}
       </ul>
