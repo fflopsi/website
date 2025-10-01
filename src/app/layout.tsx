@@ -4,8 +4,6 @@ import NavBar from '@/components/navBar';
 import Title from '@/components/title';
 import '@/style/globals.scss';
 import '@/style/navBar.scss';
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
 
@@ -32,8 +30,6 @@ export default function RootLayout({
         <NavBar />
         <div id='content'>{children}</div>
         <Footer />
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );
