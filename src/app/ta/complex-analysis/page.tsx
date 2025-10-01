@@ -67,19 +67,19 @@ export default async function ComplexAnalysis() {
         </li>
       </ul>
 
-      {/* <h2 id='session'>Exercise session</h2>
+      <h2 id='session'>Exercise session</h2>
       <ul>
         <li>Tuesday</li>
         <li>14:15 - 16:00</li>
         <li>
           <Link
             target='_blank'
-            href='https://ethz.ch/staffnet/en/utils/location.html?building=CHN&floor=D&room=46'
+            href='https://ethz.ch/staffnet/en/utils/location.html?building=ETZ&floor=G&room=91'
           >
-            CHN D 46
+            ETZ G 91
           </Link>
         </li>
-      </ul> */}
+      </ul>
     </>
   );
 }
