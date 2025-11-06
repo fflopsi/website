@@ -1,0 +1,150 @@
+@use 'tailwindcss';
+@use 'vars.scss';
+
+/* Large scale tags */
+html {
+  scroll-padding-top: 3rem;
+  scroll-behavior: smooth;
+  background-color: vars.$bg;
+  font-family: 'Source Code Pro', monospace;
+  color: vars.$text;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: {
+    left: vars.$border-lr;
+    right: vars.$border-lr;
+    top: 4vh;
+    bottom: 8vh;
+  }
+}
+#content {
+  padding-left: 1vw;
+  margin-top: 2vh;
+}
+
+/* Headings */
+@mixin heading {
+  font-weight: bold;
+  color: vars.$heading;
+  margin-bottom: 1rem;
+}
+h1 {
+  @include heading;
+  font-size: 2rem;
+  color: vars.$title;
+  margin-top: 1rem;
+}
+h2 {
+  @include heading;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+h3 {
+  @include heading;
+  font-size: 1.2rem;
+  padding-top: 1rem;
+}
+
+/* Lists */
+ul {
+  padding-left: 1rem;
+  list-style-type: none;
+}
+li {
+  margin: 0.5rem;
+  list-style-type: none;
+}
+
+/* Texts */
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.normal {
+  color: vars.$title;
+  text-decoration: none;
+}
+em {
+  color: vars.$title;
+  font-style: normal;
+}
+.cpp-code {
+  color: vars.$hover;
+  border-radius: 4px;
+  padding: 1px 4px;
+  background-color: #333333;
+  /* font-family: 'Roboto Mono', 'Menlo', monospace; */
+}
+a,
+.link-like {
+  color: vars.$link;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  &:hover {
+    color: vars.$hover;
+    text-decoration: none;
+  }
+}
+
+/* Form */
+form {
+  .form-grid {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 0.5rem;
+    @media screen and (max-width: 590px) {
+      display: block;
+    }
+  }
+  label {
+    color: gray;
+  }
+  input,
+  select,
+  textarea {
+    background-color: #272a31;
+    margin: 0.3rem 0;
+    padding: 2px 4px;
+    border-radius: 6px;
+    min-width: 24rem;
+    @media screen and (max-width: 590px) {
+      min-width: 100%;
+    }
+  }
+  select {
+    cursor: pointer;
+  }
+  textarea {
+    max-width: 100%;
+  }
+  button {
+    background-color: #272a31;
+    margin: 0.3rem 0;
+    padding: 2px 8px;
+    color: vars.$link;
+    border: 1px solid #666666 {
+      radius: 8px;
+    }
+    &:hover {
+      color: vars.$hover;
+      background-color: #333333;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Other */
+hr {
+  height: 1px;
+  border: none;
+  color: gray;
+  background-color: gray;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
