@@ -29,7 +29,7 @@ export async function GET() {
   }
 
   const user = 'fflopsi';
-  const headers = { Authorization: `token ${GITHUB_TOKEN}` };
+  const headers = { Authorization: `token ${GITHUB_TOKEN}`, 'User-Agent': 'sveltekit-app/1.0' };
   const repos: Repo[] = [];
 
   try {
