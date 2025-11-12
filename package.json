@@ -17,19 +17,19 @@
     "@sveltejs/adapter-cloudflare": "^7.2.4",
     "@sveltejs/kit": "^2.48.4",
     "@sveltejs/vite-plugin-svelte": "^6.2.1",
-    "@tailwindcss/vite": "^4.1.16",
+    "@tailwindcss/vite": "^4.1.17",
     "flowbite-svelte-icons": "^3.0.0",
     "prettier": "^3.6.2",
     "prettier-plugin-svelte": "^3.4.0",
     "prettier-plugin-tailwindcss": "^0.7.1",
-    "sass": "^1.93.3",
-    "svelte": "^5.43.4",
-    "svelte-check": "^4.3.3",
-    "tailwindcss": "^4.1.16",
+    "sass": "^1.94.0",
+    "svelte": "^5.43.6",
+    "svelte-check": "^4.3.4",
+    "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3",
-    "vite": "^7.2.1"
+    "vite": "^7.2.2"
   },
   "dependencies": {
-    "resend": "^6.4.1"
+    "resend": "^6.4.2"
   }
 }
