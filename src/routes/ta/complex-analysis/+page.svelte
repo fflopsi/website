@@ -6,6 +6,21 @@
 
 <ul>
   <li>
+    <em>[31.12.2025]</em>
+    <ul>
+      <li>
+        Uploaded my <a href="#other">summary</a>.
+      </li>
+      <li>
+        Uploaded <a href="#quiz">quiz slides</a> from the last exercise session, thanks for participating!
+      </li>
+      <li>
+        This was the last big update on here; thanks for coming to my exercise class, enjoy your
+        break, have a happy new year, and good luck with your exams!
+      </li>
+    </ul>
+  </li>
+  <li>
     <em>[14.07.2025] Welcome!</em>
     <ul>
       <li>I was officially accepted as a Funktionentheorie TA!</li>
@@ -23,13 +38,26 @@
   {/each}
 </ul>
 
-<!-- <h2 id="other">Other stuff</h2>
+<h2 id="quiz">Quiz from last exercise session</h2>
 
 <ul>
-	<li>
-		[My summary] <a href="summary.pdf">PDF</a> | <a href="summary.md">Markdown source</a>
-	</li>
-</ul> -->
+  <li>
+    <a
+      target="_blank"
+      href="https://www.mentimeter.com/app/presentation/alkchofjqmu31m56byw9y876kthczbqm"
+    >
+      Mentimeter quiz slides
+    </a>
+  </li>
+</ul>
+
+<h2 id="other">Other stuff</h2>
+
+<ul>
+  <li>
+    [My summary] (English) <a href="summary.pdf">PDF</a> | <a href="summary.md">Markdown source</a>
+  </li>
+</ul>
 
 <h2 id="links">Useful links</h2>
 
@@ -48,7 +76,7 @@
   </li>
 </ul>
 
-<h2 id="session">Exercise session</h2>
+<!-- <h2 id="session">Exercise session</h2>
 
 <ul>
   <li>Tuesday</li>
@@ -61,4 +89,4 @@
       ETZ G 91
     </a>
   </li>
-</ul>
+</ul> -->
