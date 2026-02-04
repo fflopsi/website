@@ -1,4 +1,4 @@
-import { GITHUB_TOKEN } from '$env/static/private';
+import { GITHUB_TOKEN } from '$env/dynamic/private';
 import { json } from '@sveltejs/kit';
 
 export type Repo = {
