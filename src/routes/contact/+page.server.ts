@@ -1,5 +1,5 @@
 import { Resend } from 'resend';
-import { RESEND_API_KEY, GOOGLE_API_KEY } from '$env/dynamic/private';
+import { env } from '$env/dynamic/private';
 
 export type FormState = {
   success: boolean;
@@ -15,7 +15,7 @@ export const actions = {
     const formData = await request.formData();
     const siteKeyHidden = '6LcGOYUrAAAAAPIVkoLzsJPbWlzt_QZoAQ0sWPzE';
     const recaptchaResponse = await fetch(
-      `https://recaptchaenterprise.googleapis.com/v1/projects/website-466113/assessments?key=${GOOGLE_API_KEY}`,
+      `https://recaptchaenterprise.googleapis.com/v1/projects/website-466113/assessments?key=${env.GOOGLE_API_KEY}`,
       {
         method: 'POST',
         body: JSON.stringify({
@@ -35,7 +35,7 @@ export const actions = {
         throw new Error('Recaptcha failed');
       }
 
-      const resend = new Resend(RESEND_API_KEY);
+      const resend = new Resend(env.RESEND_API_KEY);
       const { data, error } = await resend.emails.send({
         from: `${formData.get('name')?.toString() ?? 'Some user of the website'} <form@contact.florian-frauenfelder.ch>`,
         to: 'ffrauenfelde@student.ethz.ch',
