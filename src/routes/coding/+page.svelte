@@ -38,7 +38,7 @@
   <i>
     Note that most of these projects haven't been updated in quite some time, except
     <a href="#mensa">Mensa app</a>,
-    <a href="#nixos">NixOS Config</a> and
+    <a href="#nixos">Fedora dots</a> and
     <a href="#snippets">Latex Suite Snippets</a>.
   </i>
 </p>
@@ -46,15 +46,15 @@
 <h3 id="mensa">Mensa app</h3>
 
 <p>
-  In 2025, I took over the development and maintenance of the
+  In the summer of 2025, I took over the development and maintenance of the
   <a target="_blank" href="https://play.google.com/store/apps/details?id=ch.famoser.mensa">
     Mensa app
   </a>
   for Android from
   <a target="_blank" href="https://famoser.ch/">Florian Moser</a>. The app lists all the mensas of
   ETHZ and UZH and displays their respective menus. I updated the app's UI and internals and added a
-  few features, such as multi-day menu preview, highlighting vegetarian/vegan options, menu images,
-  configuration options and more.
+  few features, such as multi-day menu preview, highlighting vegetarian/vegan options, displaying
+  menu images, allergens, nutrients, configuration options and more.
 </p>
 
 <p>
@@ -66,7 +66,7 @@
   </a>.
 </p>
 
-<h3 id="nixos">NixOS Configuration and Arch Customization</h3>
+<h3 id="nixos">Fedora Dots, NixOS Configuration and Arch Customization</h3>
 
 <p>
   I originally started my
@@ -92,6 +92,12 @@
   <a target="_blank" href="https://nix-community.github.io/home-manager/">Home Manager</a> files) to
   rebuild my systems are available
   <a target="_blank" href="https://github.com/fflopsi/nixos-config">here</a>.
+</p>
+<p>
+  I could not resist the urges of distro-hopping once more, so I switched to
+  <a href="https://fedoraproject.org/">Fedora</a>. I reused much of my configuration from
+  EndeavourOS and NixOS, and everything is available
+  <a href="https://github.com/fflopsi/fedora-dots/">here</a>.
 </p>
 
 <h3 id="snippets">Obsidian Latex Suite Snippets</h3>
@@ -158,7 +164,7 @@
   <a target="_blank" href="https://github.com/fflopsi/worldutils-projects">here</a>.
 </p>
 
-<h2>My repositories</h2>
+<h2 id="repos">My repositories</h2>
 
 <ul>
   {#await data.repos}
