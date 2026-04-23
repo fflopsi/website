@@ -95,9 +95,9 @@
 </p>
 <p>
   I could not resist the urges of distro-hopping once more, so I switched to
-  <a href="https://fedoraproject.org/">Fedora</a>. I reused much of my configuration from
-  EndeavourOS and NixOS, and everything is available
-  <a href="https://github.com/fflopsi/fedora-dots/">here</a>.
+  <a target="_blank" href="https://fedoraproject.org/">Fedora</a>. I reused much of my configuration
+  from EndeavourOS and NixOS, and everything is available
+  <a target="_blank" href="https://github.com/fflopsi/fedora-dots/">here</a>.
 </p>
 
 <h3 id="snippets">Obsidian Latex Suite Snippets</h3>
