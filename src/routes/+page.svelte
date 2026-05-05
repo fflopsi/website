@@ -21,10 +21,10 @@
     I study physics at
     <a target="_blank" href="https://ethz.ch">
       <abbr title="Eidgenössische Technische Hochschule Zürich">ETHZ</abbr>
-    </a>, currently in the 5<sup>th</sup> semester BSc.
+    </a>.
   </li>
   <li>
-    I work as a <abbr title="Teaching Assistant">TA</abbr> at ETH, so far
+    I have worked as a <abbr title="Teaching Assistant">TA</abbr> at ETH, so far
     <a href="/ta/computer-science/">for <q>Informatik</q></a>,
     <a href="/ta/linear-algebra-ii/"><q>Lineare Algebra II</q></a> and
     <a href="/ta/complex-analysis/"><q>Funktionentheorie</q></a>. You can find all the material
