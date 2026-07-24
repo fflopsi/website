@@ -14,7 +14,7 @@
     <br />
     CH-8102 Oberengstringen
     <br />
-    <a href="mailto:ffrauenfelde@student.ethz.ch">ffrauenfelde@student.ethz.ch</a>
+    ffrauenfelde(at)student.ethz.ch
     <br />
     florian.l.frauenfelder(at)gmail.com
     <br />

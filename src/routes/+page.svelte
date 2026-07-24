@@ -70,7 +70,7 @@
 
 <ul>
   <li>
-    <a href="mailto:ffrauenfelde@student.ethz.ch">ffrauenfelde@student.ethz.ch</a>
+    ffrauenfelde(at)student.ethz.ch
   </li>
   <li>
     <a href="https://github.com/fflopsi">
