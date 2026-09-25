@@ -32,6 +32,21 @@
   <a href="#repos">below</a>.
 </p>
 
+<div class="stat-cards">
+  <img
+    src="https://raw.githubusercontent.com/fflopsi/fflopsi/main/profile/top-langs-dark.svg"
+    alt="GitHub stats"
+    width="350"
+    loading="lazy"
+  />
+  <img
+    src="https://raw.githubusercontent.com/fflopsi/fflopsi/main/profile/stats-dark.svg"
+    alt="GitHub stats"
+    width="500"
+    loading="lazy"
+  />
+</div>
+
 <h2>Some bigger projects</h2>
 
 <p>

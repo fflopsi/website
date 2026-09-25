@@ -139,6 +139,18 @@ form {
   }
 }
 
+/* GitHub stats */
+.stat-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.stat-cards img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Other */
 hr {
   height: 1px;
