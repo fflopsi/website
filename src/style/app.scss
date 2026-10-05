@@ -139,16 +139,30 @@ form {
   }
 }
 
-/* GitHub stats */
-.stat-cards {
+/* GitHub stats and app badges */
+.card-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
-.stat-cards img {
+.card-container img,
+.card-container a {
   max-width: 100%;
-  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+}
+.badge {
+  max-height: 100px;
+}
+.shields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
 }
 
 /* Other */
