@@ -77,7 +77,7 @@
   <img
     src="https://raw.githubusercontent.com/fflopsi/fflopsi/main/profile/stats-dark.svg"
     alt="GitHub stats"
-    width="500"
+    width="350"
     loading="lazy"
   />
   <img
