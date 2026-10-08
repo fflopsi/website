@@ -69,8 +69,8 @@
 
 <div class="card-container">
   <img
-    src="https://raw.githubusercontent.com/fflopsi/fflopsi/main/profile/top-langs-dark.svg"
-    alt="GitHub stats"
+    src="https://raw.githubusercontent.com/fflopsi/fflopsi/main/profile/top-active-langs-dark.svg"
+    alt="GitHub top active languages"
     width="350"
     loading="lazy"
   />
@@ -78,6 +78,12 @@
     src="https://raw.githubusercontent.com/fflopsi/fflopsi/main/profile/stats-dark.svg"
     alt="GitHub stats"
     width="500"
+    loading="lazy"
+  />
+  <img
+    src="https://raw.githubusercontent.com/fflopsi/fflopsi/main/profile/top-langs-dark.svg"
+    alt="GitHub top languages"
+    width="350"
     loading="lazy"
   />
 </div>
