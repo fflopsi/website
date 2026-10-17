@@ -6,6 +6,7 @@ export type Repo = {
   name: string;
   description: string;
   archived: boolean;
+  fork: boolean,
   pushed_at: string;
   owner: {
     login: string;
