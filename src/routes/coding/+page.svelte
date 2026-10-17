@@ -239,7 +239,7 @@
     {#each repos as repo}
       <li>
         {#if repo.fork}
-          (Fork)
+          <i>(Fork)</i>
         {/if}
         <a target="_blank" href={repo.html_url}>{repo.name}</a>{#if repo.owner.login !== 'fflopsi'}
           &nbsp;(<a target="_blank" href={repo.owner.html_url}>{repo.owner.login}</a>)
