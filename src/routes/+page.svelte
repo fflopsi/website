@@ -66,9 +66,7 @@
 <h2>Contact</h2>
 
 <ul>
-  <li>
-    ffrauenfelde(at)student.ethz.ch
-  </li>
+  <li>ffrauenfelde(at)student.ethz.ch</li>
   <li>
     <a href="https://github.com/fflopsi">
       <GithubSolid style="width: 2rem; display: inline-block;" />
