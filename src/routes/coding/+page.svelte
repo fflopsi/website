@@ -40,24 +40,26 @@
 <h2>About my coding journey</h2>
 
 <p>
-  Since about 2016, I’ve been teaching myself how to code. The main languages I’ve been learning are
-  <a target="_blank" href="https://www.python.org/">Python</a>,
-  <a target="_blank" href="https://www.java.com/">Java</a> and
-  <a target="_blank" href="https://kotlinlang.org/">Kotlin</a>. I’ve also looked into many other
-  languages like
+  Since about 2016, I’ve been teaching myself how to code. The main languages I’ve been learning and
+  using are
+  <a target="_blank" href="https://kotlinlang.org/">Kotlin</a> and
+  <a target="_blank" href="https://www.python.org/">Python</a>. I’ve also looked into many other
+  languages and other stuff like
+  <a target="_blank" href="https://www.latex-project.org/">LaTeX</a>,
+  <a target="_blank" href="https://www.java.com/">Java</a>,
   <a target="_blank" href="https://en.wikipedia.org/wiki/Shell_script">Shell</a>,
   <a target="_blank" href="https://www.gnu.org/software/bash/">Bash</a>,
-  <a target="_blank" href="https://www.latex-project.org/">LaTeX</a>,
-  <a target="_blank" href="https://www.c-language.org/">C</a>,
-  <a target="_blank" href="https://isocpp.org/">C++</a>,
-  <a target="_blank" href="https://learn.microsoft.com/en-gb/dotnet/csharp/">C#</a>,
-  <a target="_blank" href="https://en.wikipedia.org/wiki/SQL">SQL</a>,
   <a target="_blank" href="https://nixos.org/">Nix</a>,
+  <a target="_blank" href="https://svelte.dev/">Svelte</a>,
   <a target="_blank" href="https://html.spec.whatwg.org/multipage/">HTML</a>,
   <a target="_blank" href="https://www.w3.org/TR/css/">CSS</a>,
   <a target="_blank" href="https://262.ecma-international.org/15.0/index.html">JavaScript</a>,
   <a target="_blank" href="https://www.typescriptlang.org/">TypeScript</a>,
+  <a target="_blank" href="https://www.c-language.org/">C</a>,
+  <a target="_blank" href="https://isocpp.org/">C++</a>,
+  <a target="_blank" href="https://learn.microsoft.com/en-gb/dotnet/csharp/">C#</a>,
   <a target="_blank" href="https://dart.dev/">Dart</a>,
+  <a target="_blank" href="https://en.wikipedia.org/wiki/SQL">SQL</a>,
   <a target="_blank" href="https://www.r-project.org/">R</a>, etc.
 </p>
 <p>
