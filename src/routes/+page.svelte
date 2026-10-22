@@ -1,9 +1,6 @@
 <script>
   import RepoLink from '$lib/RepoLink.svelte';
-  import { GithubSolid } from 'flowbite-svelte-icons';
-  // import GithubSolid from 'flowbite-svelte-icons/GithubSolid.svelte';
-  import LinkedinSolid from 'flowbite-svelte-icons/LinkedinSolid.svelte';
-  import RedditSolid from 'flowbite-svelte-icons/RedditSolid.svelte';
+  import { GithubSolid, LinkedinSolid, RedditSolid } from 'flowbite-svelte-icons';
 </script>
 
 <h2>About me</h2>
