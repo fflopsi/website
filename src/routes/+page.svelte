@@ -15,10 +15,11 @@
   </li>
   <li>I have a motorcycle, a red 2025 BMW F 900 XR, to be exact.</li>
   <li>
-    I study physics at
+    I have been studying physics at
     <a target="_blank" href="https://ethz.ch">
       <abbr title="Eidgenössische Technische Hochschule Zürich">ETHZ</abbr>
-    </a>.
+    </a> since 2023, with an exchange semester in autumn 2026 at
+    <a target="_blank" href="https://www.uu.se/"><abbr title="Uppsala Universitet">UU</abbr></a>.
   </li>
   <li>
     I have worked as a <abbr title="Teaching Assistant">TA</abbr> at ETH, so far
