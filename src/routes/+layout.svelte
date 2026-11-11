@@ -6,6 +6,7 @@
   import NavBar from '#lib/NavBar.svelte';
   import Title from '#lib/Title.svelte';
   import type { Snippet } from 'svelte';
+  import '../style/tailwind.css';
   import '../style/app.scss';
   import '../style/navBar.scss';
 
