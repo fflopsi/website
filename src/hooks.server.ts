@@ -1,4 +1,4 @@
-import { redirects } from '$lib/redirects';
+import { redirects } from '#lib/redirects.ts';
 import { redirect } from '@sveltejs/kit';
 
 export async function handle({ event, resolve }) {

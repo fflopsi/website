@@ -1,7 +1,7 @@
 <script lang="ts">
   import { enhance } from '$app/forms';
-  import RecaptchaHidden from '$lib/RecaptchaHidden.svelte';
-  import RepoLink from '$lib/RepoLink.svelte';
+  import RecaptchaHidden from '#lib/RecaptchaHidden.svelte';
+  import RepoLink from '#lib/RepoLink.svelte';
   import type { FormState } from './+page.server';
 
   let { form }: { form: FormState } = $props();

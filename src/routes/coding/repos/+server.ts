@@ -1,4 +1,4 @@
-import { env } from '$env/dynamic/private';
+import { GITHUB_TOKEN } from '$app/env/private';
 import { json } from '@sveltejs/kit';
 
 export type Repo = {
@@ -6,7 +6,7 @@ export type Repo = {
   name: string;
   description: string;
   archived: boolean;
-  fork: boolean,
+  fork: boolean;
   pushed_at: string;
   owner: {
     login: string;
@@ -30,7 +30,7 @@ export async function GET() {
   }
 
   const user = 'fflopsi';
-  const headers = { Authorization: `token ${env.GITHUB_TOKEN}`, 'User-Agent': 'sveltekit-app/1.0' };
+  const headers = { Authorization: `token ${GITHUB_TOKEN}`, 'User-Agent': 'sveltekit-app/1.0' };
   const repos: Repo[] = [];
 
   try {

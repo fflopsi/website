@@ -1,11 +1,12 @@
 <script lang="ts">
-  import favicon from '$lib/assets/favicon.svg';
-  import DevWarning from '$lib/DevWarning.svelte';
-  import Footer from '$lib/Footer.svelte';
-  import Head from '$lib/Head.svelte';
-  import NavBar from '$lib/NavBar.svelte';
-  import Title from '$lib/Title.svelte';
+  import favicon from '#lib/assets/favicon.svg';
+  import DevWarning from '#lib/DevWarning.svelte';
+  import Footer from '#lib/Footer.svelte';
+  import Head from '#lib/Head.svelte';
+  import NavBar from '#lib/NavBar.svelte';
+  import Title from '#lib/Title.svelte';
   import type { Snippet } from 'svelte';
+  import '../style/tailwind.css';
   import '../style/app.scss';
   import '../style/navBar.scss';
 

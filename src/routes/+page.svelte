@@ -1,5 +1,5 @@
 <script>
-  import RepoLink from '$lib/RepoLink.svelte';
+  import RepoLink from '#lib/RepoLink.svelte';
   import { GithubSolid, LinkedinSolid, RedditSolid } from 'flowbite-svelte-icons';
 </script>
 
