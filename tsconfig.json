@@ -3,6 +3,7 @@
   "include": ["src", "test", "*"],
   "exclude": ["src/service-worker"],
   "compilerOptions": {
+    "types": ["$app/types", "node"],
     "allowJs": true,
     "checkJs": true,
     "esModuleInterop": true,
